@@ -1,0 +1,40 @@
+/* CSS Reset */
+
+/* Box sizing rules */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Remove default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles (bullet points) */
+ul {
+  list-style: none;
+}
+
+/* Remove anchor text decoration */
+a {
+  text-decoration: none;
+}
+
+/* Set default font family and size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Additional resets or styles can be added as needed */
+
+/* Resetting the styles for other HTML elements */
+/* For example, if you have form elements, tables, etc., you might want to add more reset styles */
+
+/* For more complex resets, consider using a CSS reset library like Normalize.css or Reset CSS */
+
+/* End of CSS Reset */
