@@ -6,16 +6,16 @@
 .info{
   display: flex;
   flex-direction: row;
-  margin: 10px;
 }
 
 .left{
   width: 80%;
-  padding: 10px;
+  padding: 2%;
 }
 
 .right{
   width: 20%;
+  padding: 2%;
 }
 
 li{
@@ -24,8 +24,8 @@ li{
 }
 
 h2{
-  margin-left: 20px;
-  margin-top: 20px;
+  margin-left: 2%;
+  margin-top: 2%;
 }
 
 p{
