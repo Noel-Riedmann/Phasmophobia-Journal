@@ -1,1 +1,46 @@
-<p>ghosts-list works!</p>
+<div class="container">
+  <div class="filter"></div>
+  <div class="list">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let row">{{ row.name }}</td>
+      </ng-container>
+
+      <!-- Evidence Column -->
+      <ng-container matColumnDef="Evidence">
+        <th mat-header-cell *matHeaderCellDef>Evidence</th>
+        <td mat-cell *matCellDef="let row">
+          <span *ngFor="let evidence of row.evidence.$values">{{ evidence.name }}&nbsp;&nbsp;&nbsp;</span>
+        </td>
+      </ng-container>
+
+      <!-- Speed Column -->
+      <ng-container matColumnDef="Speed">
+        <th mat-header-cell *matHeaderCellDef>Speed</th>
+        <td mat-cell *matCellDef="let row">{{ row.speed.$values[0].name }}</td>
+      </ng-container>
+
+      <!-- Sanity Threshold Column -->
+      <ng-container matColumnDef="SanityThreshold">
+        <th mat-header-cell *matHeaderCellDef>Sanity Threshold</th>
+        <td mat-cell *matCellDef="let row">{{ row.sanityThreshold.$values[0].name }}</td>
+      </ng-container>
+
+      <!-- Details Column -->
+      <ng-container matColumnDef="Details">
+        <th mat-header-cell *matHeaderCellDef>Details</th>
+        <td mat-cell *matCellDef="let row">
+          <a [routerLink]="['/ghosts/details', row.ghostId]">Show Details</a>
+        </td>
+      </ng-container>
+
+      <!-- Table Rows -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+
+</div>

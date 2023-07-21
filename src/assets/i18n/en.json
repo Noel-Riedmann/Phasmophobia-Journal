@@ -1,3 +1,19 @@
 {
-  "PHASMOPHOBIA_JOURNAL": "Phasmophobia Journal"
+  "PHASMOPHOBIA_JOURNAL": "Phasmophobia Journal",
+  "ALL_PHASMOPHOBIA_GHOSTS_AND_THEIR_ABILITIES": "All Phasmophobia ghosts and their abilities",
+  "Spirit": "Spirit",
+  "JOURNAL_INFO": "What the journal says",
+  "STRENGTHS": "Strenghts",
+  "WEAKNESSES": "Weaknesses",
+  "BEHAVIOUR": "Behaviour",
+  "TEST": "How to test for ",
+  "EVIDENCE": "Evidence",
+  "SPEED": "Speed",
+  "SANITY_THRESHOLD": "Sanity threshold",
+  "JOURNAL_SPIRIT": "Spirits are very common ghosts. They are very powerful, but passive, only attacking when they need to. They defend their place of death to the utmost degree, killing anyone that is caught overstaying their welcome.",
+  "STRENGTHS_SPIRIT": "A spirit has no specific strenghts.",
+  "WEAKNESSES_SPIRIT": "A Spirit can be temporarily stopped by burning Smudge Sticks near them.",
+  "BEHAVIOR_SPIRIT": "With no special powers, and a harsher reaction to Smudge Sticks, Spirits serve as a baseline to measure other ghosts against. With their behavior not being especially unique amongst the ghosts, this lack of defining traits that can confuse investigators; therefore, unless clear evidence is established, a Spirit can be easily mistaken for another entity.",
+  "TEST_SPIRIT": "The main (and usually only) way to test for a Spirit without using evidences is to lower the average sanity to below 50%, and smudge the ghost while it is not hunting; if it hunts before the three minutes is up, it is not a Spirit. If it hunts only after three minutes, it is very likely (though not conclusively) a Spirit. Note that if it hunts within the first minute of the smudge stick being used, then the smudge stick did not work, and the player should attempt to smudge it again. In Nightmare difficulty, players should wait for a hunt or a burnt crucifix to confirm that the average sanity is low enough.",
+  "":""
 }
