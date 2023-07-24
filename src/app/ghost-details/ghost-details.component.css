@@ -1,37 +1,51 @@
-.container{
+.container {
   display: flex;
   flex-direction: column;
 }
 
-.info{
+.info {
   display: flex;
   flex-direction: row;
 }
 
-.left{
+.left {
   width: 80%;
   padding: 2%;
 }
 
-.right{
+.left h3 {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.left h3::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.left p {
+  margin-top: 5px;
+}
+
+.right {
   width: 20%;
   padding: 2%;
 }
 
-li{
+li {
   margin: 10px 0;
-
 }
 
-h2{
+h1 {
   margin-left: 2%;
   margin-top: 2%;
 }
 
-p{
+p {
   margin-bottom: 20px;
-}
-
-h3{
-  margin-bottom: 5px;
 }

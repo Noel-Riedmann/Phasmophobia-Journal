@@ -20,13 +20,17 @@
       <!-- Speed Column -->
       <ng-container matColumnDef="Speed">
         <th mat-header-cell *matHeaderCellDef>Speed</th>
-        <td mat-cell *matCellDef="let row">{{ row.speed.$values[0].name }}</td>
+        <td mat-cell *matCellDef="let row">
+          <span *ngFor="let speed of row.speed.$values">{{ speed.name }}&nbsp;&nbsp;&nbsp;</span>
+        </td>
       </ng-container>
 
       <!-- Sanity Threshold Column -->
       <ng-container matColumnDef="SanityThreshold">
         <th mat-header-cell *matHeaderCellDef>Sanity Threshold</th>
-        <td mat-cell *matCellDef="let row">{{ row.sanityThreshold.$values[0].name }}</td>
+        <td mat-cell *matCellDef="let row">
+          <span *ngFor="let sanityThreshold of row.sanityThreshold.$values">{{ sanityThreshold.name }}&nbsp;&nbsp;&nbsp;</span>
+        </td>
       </ng-container>
 
       <!-- Details Column -->

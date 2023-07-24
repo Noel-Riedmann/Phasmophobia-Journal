@@ -6,6 +6,7 @@
   border-bottom-style: solid;
   padding: 10px;
   font-family: cursive;
+  height: 5rem;
 }
 
 .logo {
@@ -34,7 +35,7 @@
 }
 
 .logoimg {
-  max-width: 100px;
+  max-width: 60px;
 }
 
 .navitems{
