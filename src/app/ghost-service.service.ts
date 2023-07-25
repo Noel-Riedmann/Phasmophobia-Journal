@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
-import { filter } from 'rxjs/operators';
+import { map, catchError, filter } from 'rxjs/operators';
 
 export interface Ghost {
   id: number;
@@ -35,6 +34,7 @@ export interface SanityThreshold {
 export interface EvidenceItem {
   evidenceId: number;
   name: string;
+  isChecked: boolean;
 }
 
 export interface SpeedItem {
@@ -47,7 +47,9 @@ export interface SanityThresholdItem {
   name: string;
 }
 
-
+export interface ResponseWrapper<T> {
+  $values: T[]
+}
 
 @Injectable({
   providedIn: 'root'
@@ -57,12 +59,12 @@ export class GhostServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getGhosts(): Observable<Ghost[]> {
-    return this.http.get<any>(this.apiUrl).pipe(
-      map((response: any) => response.$values),
-      catchError((error: any) => {
+  getGhosts() {
+    return this.http.get<ResponseWrapper<Ghost>>(this.apiUrl).pipe(
+      map((response) => response.$values),
+      catchError((error) => {
         console.error('Error fetching ghost details:', error);
-        return of([]);
+        return of([] as Ghost[]);
       })
     );
   }

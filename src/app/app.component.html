@@ -1,22 +1,2 @@
-<div class="header">
-  <div class="logo">
-    <img src="assets\images\logo.png" alt="" class="logoimg">
-  </div>
-  <div class="headline">
-    <h1>{{ 'PHASMOPHOBIA_JOURNAL' | translate }}</h1>
-  </div>
-  <div class="navigation">
-    <a href="" class="navitem">{{'ITEMS' | translate}}</a>
-    &nbsp;
-    <a href="" class="navitem">{{'MAPS' | translate}}</a>
-    &nbsp;
-    <a href="" class="navitem" routerLink="">{{'GHOSTS' | translate}}</a>
-  </div>
-  <div class="language">
-    <select (change)="changeLanguage($event)" class="navitems">
-      <option [value]="'en'" [selected]="getCurrentLanguage() === 'en'">{{ 'ENGLISH' | translate }}</option>
-      <option [value]="'de'" [selected]="getCurrentLanguage() === 'de'">{{ 'GERMAN' | translate }}</option>
-    </select>
-  </div>
-</div>
+<app-header></app-header>
 <router-outlet></router-outlet>

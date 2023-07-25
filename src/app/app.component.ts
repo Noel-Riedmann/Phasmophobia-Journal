@@ -9,18 +9,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'Phasmophobia-Journal';
-  language: string = '';
-
-  constructor(private languageService: LanguageService, private router: Router) {
-  }
-  changeLanguage(event: any) {
-    const language = event.target.value;
-    this.language = language;
-    this.languageService.setCurrentLanguage(language);
-  }
-  getCurrentLanguage(): string {
-    return this.languageService.getCurrentLanguage();
-  }
 }
 
 
