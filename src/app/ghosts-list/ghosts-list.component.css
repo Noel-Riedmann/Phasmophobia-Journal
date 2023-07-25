@@ -1,20 +1,54 @@
-.container{
+.container {
   display: flex;
-  min-height: 100%;;
+  min-height: 100%;
+  ;
 }
 
-.filter{
+.filter {
   width: 20%;
   height: 100%;
   padding: 10px;
 }
 
-.list{
+.list {
   width: 80%;
   padding: 10px;
 }
 
-.inputField{
+.inputField {
   padding: 20px;
-  padding-top: 38px;
+  padding-top: 22px;
+}
+
+.evidence,
+.speed,
+.sanityThreshold {
+  display: block;
+  margin: 5px;
+}
+
+a {
+  color: black;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.evidence-checkbox,
+.evidencehead,
+.speed-checkbox,
+.sanityThreshold-checkbox {
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.evidencehead,
+.speedhead,
+.sanityThresholdhead {
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+
 }

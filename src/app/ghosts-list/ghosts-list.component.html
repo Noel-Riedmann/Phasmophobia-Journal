@@ -5,17 +5,30 @@
         <mat-form-field class="inputField">
           <input matInput (keyup)="applyFilter($event)" placeholder="Search Ghosts" />
         </mat-form-field>
-        <mat-checkbox
-        *ngFor="let evidence of getUniqueEvidenceItems()"
-        [(ngModel)]="evidence.isChecked"
-        (change)="onEvidenceSelectionChange($event, evidence.evidenceId)"
-      >
-        {{ evidence.name }}
-      </mat-checkbox>
-
+        <div class="evidencehead">Evidence</div>
+        <div *ngFor="let evidenceName of uniqueEvidenceNames">
+          <mat-checkbox class="evidence-checkbox" [value]="evidenceName" (change)="onEvidenceCheckboxChange($event)">
+            {{evidenceName}}
+          </mat-checkbox>
+        </div>
+        <div class="speedhead">Speed</div>
+        <div *ngFor="let speedName of uniqueSpeedNames">
+          <mat-checkbox class="speed-checkbox" [value]="speedName" (change)="onSpeedCheckboxChange($event)">
+            {{speedName}}
+          </mat-checkbox>
+        </div>
+        <div class="sanityThresholdhead">Sanity Threshold</div>
+        <div *ngFor="let sanityThresholdName of uniqueSanityThresholdNames">
+          <mat-checkbox class="sanityThreshold-checkbox" [value]="sanityThresholdName"
+            (change)="onSanityThresholdCheckboxChange($event)">
+            {{sanityThresholdName}}
+          </mat-checkbox>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>
+
+
   <div class="list">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -27,22 +40,24 @@
       <ng-container matColumnDef="Evidence">
         <th mat-header-cell *matHeaderCellDef>Evidence</th>
         <td mat-cell *matCellDef="let row">
-          <span *ngFor="let evidence of row.evidence.$values">{{ evidence.name }}&nbsp;&nbsp;&nbsp;</span>
+          <span class="evidence" [ngClass]="{'bold': selectedEvidenceNames.includes(evidence.name)}"
+            *ngFor="let evidence of row.evidence.$values">{{ evidence.name }}</span>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="Speed">
         <th mat-header-cell *matHeaderCellDef>Speed</th>
         <td mat-cell *matCellDef="let row">
-          <span *ngFor="let speed of row.speed.$values">{{ speed.name }}&nbsp;&nbsp;&nbsp;</span>
+          <span class="speed" [ngClass]="{'bold': selectedSpeedNames.includes(speed.name)}"
+            *ngFor="let speed of row.speed.$values">{{ speed.name }}</span>
         </td>
       </ng-container>
 
       <ng-container matColumnDef="SanityThreshold">
         <th mat-header-cell *matHeaderCellDef>Sanity Threshold</th>
         <td mat-cell *matCellDef="let row">
-          <span *ngFor="let sanityThreshold of row.sanityThreshold.$values">{{ sanityThreshold.name
-            }}&nbsp;&nbsp;&nbsp;</span>
+          <span class="sanityThreshold" [ngClass]="{'bold': selectedSanityThresholdNames.includes(sanityThreshold.name)}"
+            *ngFor="let sanityThreshold of row.sanityThreshold.$values">{{ sanityThreshold.name }}</span>
         </td>
       </ng-container>
 
