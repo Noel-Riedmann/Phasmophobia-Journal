@@ -16,18 +16,28 @@
         <p [innerHTML]="ghostDetails.test | translate"></p>
       </div>
       <div class="right">
-        <h3>{{ 'EVIDENCE' | translate }}</h3>
-        <ul>
-          <li *ngFor="let evidence of ghostDetails.evidence.$values">{{ evidence.name }}</li>
-        </ul>
-        <h3>{{ 'SPEED' | translate }}</h3>
-        <ul>
-          <li *ngFor="let speed of ghostDetails.speed.$values">{{ speed.name }}</li>
-        </ul>
-        <h3>{{ 'SANITY_THRESHOLD' | translate }}</h3>
-        <ul>
-          <li *ngFor="let sanityThreshold of ghostDetails.sanityThreshold.$values">{{ sanityThreshold.name }}</li>
-        </ul>
+        <div class="rightitem">
+          <h3>{{ 'EVIDENCE' | translate }}</h3>
+          <ul>
+            <li *ngFor="let evidence of ghostDetails.evidence.$values">{{ evidence.name }}</li>
+          </ul>
+        </div>
+        <div class="rightitem">
+
+          <h3>{{ 'SPEED' | translate }}</h3>
+          <ul>
+            <li *ngFor="let speed of ghostDetails.speed.$values">{{ speed.name }}</li>
+          </ul>
+        </div>
+
+        <div class="rightitem">
+
+          <h3>{{ 'SANITY_THRESHOLD' | translate }}</h3>
+          <ul>
+            <li *ngFor="let sanityThreshold of ghostDetails.sanityThreshold.$values">{{ sanityThreshold.name }}</li>
+          </ul>
+        </div>
+
         <button mat-raised-button class="backbtn" (click)="goBack()">Go back</button>
 
       </div>

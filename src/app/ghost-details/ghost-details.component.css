@@ -49,3 +49,28 @@ p {
   background-color: #53131E;
   color: white;
 }
+
+@media only screen and (max-width: 768px) {
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right{
+    display: flex;
+  }
+
+  .rightitem{
+    margin: 10px;
+  }
+
+  .left{
+    width: 100%;
+  }
+
+  .backbtn{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+}
