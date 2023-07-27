@@ -52,3 +52,17 @@ a {
   margin-top: 10px;
 
 }
+
+.sanityThreshold-container {
+  display: flex;
+}
+
+
+.clearbtn {
+  font-family: PhasmophobiaJournalFont;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background-color: #53131E;
+  color: white;
+}

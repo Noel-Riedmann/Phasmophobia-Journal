@@ -1,0 +1,17 @@
+
+@font-face {
+  font-family: PhasmophobiaFont;
+  src: url("/assets/fonts/October Crow.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: PhasmophobiaJournalFont;
+  src: url("/assets/fonts/lazy_dog.ttf") format("truetype");
+}
+
+body{
+  background: url('src/assets/images/background.png');
+
+  font-family: PhasmophobiaJournalFont;
+  font-size: 22px;
+}

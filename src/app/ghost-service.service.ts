@@ -55,7 +55,7 @@ export interface ResponseWrapper<T> {
   providedIn: 'root'
 })
 export class GhostServiceService {
-  private apiUrl = 'https://localhost:7288/api/ghost';
+  private apiUrl = 'http://phasmophobiajournaldatabase.somee.com/api/ghost';
 
   constructor(private http: HttpClient) { }
 

@@ -6,24 +6,45 @@
           <input matInput (keyup)="applyFilter($event)" placeholder="Search Ghosts" />
         </mat-form-field>
         <div class="evidencehead">Evidence</div>
-        <div *ngFor="let evidenceName of uniqueEvidenceNames">
-          <mat-checkbox class="evidence-checkbox" [value]="evidenceName" (change)="onEvidenceCheckboxChange($event)">
+        <div *ngFor="let evidenceName of uniqueEvidenceNames; let i = index">
+          <mat-checkbox class="evidence-checkbox" [value]="evidenceName" [(ngModel)]="evidenceChecked[i]"
+            (change)="onEvidenceCheckboxChange($event)">
             {{evidenceName}}
           </mat-checkbox>
         </div>
         <div class="speedhead">Speed</div>
-        <div *ngFor="let speedName of uniqueSpeedNames">
-          <mat-checkbox class="speed-checkbox" [value]="speedName" (change)="onSpeedCheckboxChange($event)">
+        <div *ngFor="let speedName of uniqueSpeedNames; let i = index">
+          <mat-checkbox class="speed-checkbox" [value]="speedName" [(ngModel)]="speedChecked[i]"
+            (change)="onSpeedCheckboxChange($event)">
             {{speedName}}
           </mat-checkbox>
         </div>
         <div class="sanityThresholdhead">Sanity Threshold</div>
-        <div *ngFor="let sanityThresholdName of uniqueSanityThresholdNames">
-          <mat-checkbox class="sanityThreshold-checkbox" [value]="sanityThresholdName"
-            (change)="onSanityThresholdCheckboxChange($event)">
-            {{sanityThresholdName}}
-          </mat-checkbox>
+        <div class="sanityThreshold-container">
+          <div class="sanityThreshold-column">
+            <div
+              *ngFor="let sanityThresholdName of uniqueSanityThresholdNames.slice(0, sanityThresholdSplitIndex); let i = index">
+              <mat-checkbox class="sanityThreshold-checkbox" [value]="sanityThresholdName"
+                [(ngModel)]="sanityThresholdChecked[i]" (change)="onSanityThresholdCheckboxChange($event)">
+                {{sanityThresholdName}}
+              </mat-checkbox>
+            </div>
+          </div>
+          <div class="sanityThreshold-column">
+            <div
+              *ngFor="let sanityThresholdName of uniqueSanityThresholdNames.slice(sanityThresholdSplitIndex); let i = index">
+              <mat-checkbox class="sanityThreshold-checkbox" [value]="sanityThresholdName"
+                [(ngModel)]="sanityThresholdChecked[i + sanityThresholdSplitIndex]"
+                (change)="onSanityThresholdCheckboxChange($event)">
+                {{sanityThresholdName}}
+              </mat-checkbox>
+            </div>
+          </div>
         </div>
+        <button mat-raised-button class="clearbtn" (click)="clearAllFilters()">Clear All Filters</button>
+
+
+
       </mat-card-content>
     </mat-card>
   </div>
@@ -56,7 +77,8 @@
       <ng-container matColumnDef="SanityThreshold">
         <th mat-header-cell *matHeaderCellDef>Sanity Threshold</th>
         <td mat-cell *matCellDef="let row">
-          <span class="sanityThreshold" [ngClass]="{'bold': selectedSanityThresholdNames.includes(sanityThreshold.name)}"
+          <span class="sanityThreshold"
+            [ngClass]="{'bold': selectedSanityThresholdNames.includes(sanityThreshold.name)}"
             *ngFor="let sanityThreshold of row.sanityThreshold.$values">{{ sanityThreshold.name }}</span>
         </td>
       </ng-container>

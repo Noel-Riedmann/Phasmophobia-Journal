@@ -1,6 +1,7 @@
 <div class="container">
   <div *ngIf="ghostDetails">
     <h1>{{ ghostDetails.name | translate }}</h1>
+
     <div class="info">
       <div class="left">
         <h3>{{ 'JOURNAL_INFO' | translate }}</h3>
@@ -27,6 +28,8 @@
         <ul>
           <li *ngFor="let sanityThreshold of ghostDetails.sanityThreshold.$values">{{ sanityThreshold.name }}</li>
         </ul>
+        <button mat-raised-button class="backbtn" (click)="goBack()">Go back</button>
+
       </div>
     </div>
   </div>

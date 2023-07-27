@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Ghost, GhostServiceService, Evidence, Speed, SanityThreshold } from '../ghost-service.service';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-ghost-details',
@@ -12,7 +14,8 @@ export class GhostDetailsComponent implements OnInit {
 
   constructor(
     private ghostService: GhostServiceService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -29,5 +32,9 @@ export class GhostDetailsComponent implements OnInit {
         console.error('Error fetching ghost details:', error);
       }
     );
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

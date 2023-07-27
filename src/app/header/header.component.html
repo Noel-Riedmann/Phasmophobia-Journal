@@ -10,11 +10,13 @@
     <a mat-button routerLink="/maps" class="navitem">{{'MAPS' | translate}}</a>
     <a mat-button routerLink="/ghosts" class="navitem">{{'GHOSTS' | translate}}</a>
 
-
-    <select (change)="changeLanguage($event)" class="navitems" >
+    <!--
+      <select (change)="changeLanguage($event)" class="navitems" >
       <option [value]="'en'" [selected]="getCurrentLanguage() === 'en'">{{ 'ENGLISH' | translate }}</option>
       <option [value]="'de'" [selected]="getCurrentLanguage() === 'de'">{{ 'GERMAN' | translate }}</option>
     </select>
+  -->
+
 
   </div>
 </mat-toolbar>

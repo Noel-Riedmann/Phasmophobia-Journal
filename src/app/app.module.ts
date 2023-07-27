@@ -19,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -39,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatMenuModule,
     MatCheckboxModule,
     MatCardModule,
+    MatButtonModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {
