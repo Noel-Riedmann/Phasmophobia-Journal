@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Ghost, GhostServiceService, EvidenceItem } from '../ghost-service.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatCheckboxChange } from '@angular/material/checkbox';
@@ -10,7 +10,7 @@ import { HttpParams } from '@angular/common/http';
 @Component({
   selector: 'app-ghosts-list',
   templateUrl: './ghosts-list.component.html',
-  styleUrls: ['./ghosts-list.component.css']
+  styleUrls: ['./ghosts-list.component.scss']
 })
 export class GhostsListComponent implements OnInit {
   displayedColumns: string[] = ['Name', 'Evidence', 'Speed', 'SanityThreshold', 'Details'];
@@ -133,7 +133,6 @@ export class GhostsListComponent implements OnInit {
   loadGhosts() {
     this.ghostService.getGhosts().subscribe(
       (response: Ghost[]) => {
-        console.log('Received ghosts:', response);
         this.allGhosts = response;
         this.dataSource.data = this.allGhosts;
       },
@@ -207,7 +206,12 @@ export class GhostsListComponent implements OnInit {
     this.updateUrl();
   }
 
-
+  @ViewChild('searchField')
+  searchField!: ElementRef;
+  onEnterPress() {
+    const inputElement = this.searchField.nativeElement;
+    inputElement.blur();
+}
 
 
 }

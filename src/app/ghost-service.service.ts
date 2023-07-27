@@ -55,7 +55,7 @@ export interface ResponseWrapper<T> {
   providedIn: 'root'
 })
 export class GhostServiceService {
-  private apiUrl = 'http://phasmophobiajournaldatabase.somee.com/api/ghost';
+  private apiUrl = 'https://phasmoapi.azurewebsites.net/api/ghost';
 
   constructor(private http: HttpClient) { }
 

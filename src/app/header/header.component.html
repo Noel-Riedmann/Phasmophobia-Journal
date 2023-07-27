@@ -6,10 +6,11 @@
     <h1>{{ 'PHASMOPHOBIA_JOURNAL' | translate }}</h1>
   </div>
   <div class="navigation">
-    <a mat-button routerLink="/items" class="navitem">{{'ITEMS' | translate}}</a>
-    <a mat-button routerLink="/maps" class="navitem">{{'MAPS' | translate}}</a>
-    <a mat-button routerLink="/ghosts" class="navitem">{{'GHOSTS' | translate}}</a>
-
+    <!--
+      <a mat-button routerLink="/items" class="navitem">{{'ITEMS' | translate}}</a>
+      <a mat-button routerLink="/maps" class="navitem">{{'MAPS' | translate}}</a>
+    -->
+      <a mat-button routerLink="/ghosts" class="navitem">{{'GHOSTS' | translate}}</a>
     <!--
       <select (change)="changeLanguage($event)" class="navitems" >
       <option [value]="'en'" [selected]="getCurrentLanguage() === 'en'">{{ 'ENGLISH' | translate }}</option>
