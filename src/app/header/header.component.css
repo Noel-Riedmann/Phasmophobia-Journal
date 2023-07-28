@@ -1,4 +1,3 @@
-/* header.component.css */
 .mat-toolbar {
   display: flex;
   align-items: center;
@@ -51,15 +50,31 @@ select:hover {
   cursor: pointer;
 }
 
+a{
+  color: black;
+}
+
+
+
 @media only screen and (max-width: 640px) {
-  .navigation{
-    display: none;
-  }
-  .logo{
+  .logo {
     display: none;
   }
 
-  .headline{
+  .headline {
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+
+  .textMenu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .burgerMenu {
+    display: none;
   }
 }

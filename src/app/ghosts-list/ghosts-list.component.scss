@@ -57,7 +57,7 @@
     display: flex;
   }
 
-  .clearbtn {
+  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
     font-family: PhasmophobiaJournalFont;
     font-size: 20px;
     margin-left: 20px;
@@ -68,7 +68,7 @@
 }
 
 /* Medium screens (max-width: 1200px) and (min-width: 768px) */
-@media only screen and (max-width: 1200px) and (min-width: 768px) {
+@media only screen and (max-width: 1199px) and (min-width: 768px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -129,7 +129,7 @@
     display: flex;
   }
 
-  .clearbtn {
+  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
     font-family: PhasmophobiaJournalFont;
     font-size: 20px;
     margin-left: 20px;
@@ -202,7 +202,7 @@
     display: flex;
   }
 
-  .clearbtn {
+  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
     font-family: PhasmophobiaJournalFont;
     font-size: 20px;
     margin-left: 20px;
@@ -281,7 +281,7 @@
     display: flex;
   }
 
-  .clearbtn {
+  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
     font-family: PhasmophobiaJournalFont;
     font-size: 20px;
     margin-left: 20px;

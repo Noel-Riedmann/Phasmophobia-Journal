@@ -21,6 +21,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 
 
@@ -29,7 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent],
+  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

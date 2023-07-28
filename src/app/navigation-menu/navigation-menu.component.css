@@ -1,0 +1,18 @@
+.navMenu {
+  margin-left: 20px;
+  margin-top: 30px;
+  vertical-align: baseline;
+  font-size: 25px;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+a {
+  color: black;
+}
+
+.mat-icon {
+  scale: 2;
+}
