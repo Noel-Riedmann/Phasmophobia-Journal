@@ -74,3 +74,8 @@ p {
     bottom: 10px;
   }
 }
+
+.loadingPlaceholder{
+  margin: 20px;
+  font-size: 32px;
+}

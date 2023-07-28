@@ -25,6 +25,10 @@ export class GhostsListComponent implements OnInit {
   evidenceChecked: boolean[] = [];
   speedChecked: boolean[] = [];
   sanityThresholdChecked: boolean[] = [];
+  isLoading: boolean = true;
+
+
+
 
 
   constructor(private changeDetectorRef: ChangeDetectorRef, private ghostService: GhostServiceService, private router: Router, private route: ActivatedRoute) {
@@ -128,19 +132,22 @@ export class GhostsListComponent implements OnInit {
     });
     this.dataSource.data = filteredGhosts;
   }
-
-
   loadGhosts() {
     this.ghostService.getGhosts().subscribe(
       (response: Ghost[]) => {
         this.allGhosts = response;
         this.dataSource.data = this.allGhosts;
+        this.isLoading = false;
+        this.updateDisplayedData();
+        this.updateCheckboxes();
       },
       (error) => {
         console.error('Error fetching ghosts:', error);
+        this.isLoading = false;
       }
     );
   }
+
 
   applyFilter(event: Event) {
     console.log('applyFilter called with:', event);
@@ -165,17 +172,18 @@ export class GhostsListComponent implements OnInit {
   updateUrl() {
     let queryParams = '';
     if (this.selectedEvidenceNames.length > 0) {
-      queryParams += 'evidence=' + this.selectedEvidenceNames.join('&evidence=');
+      queryParams += 'evidence=' + this.selectedEvidenceNames.join('&evidence=') + '&';
     }
     if (this.selectedSpeedNames.length > 0) {
-      queryParams += '&speed=' + this.selectedSpeedNames.join('&speed=');
+      queryParams += 'speed=' + this.selectedSpeedNames.join('&speed=') + '&';
     }
     if (this.selectedSanityThresholdNames.length > 0) {
-      queryParams += '&sanityThreshold=' + this.selectedSanityThresholdNames.join('&sanityThreshold=');
+      queryParams += 'sanityThreshold=' + this.selectedSanityThresholdNames.join('&sanityThreshold=') + '&';
     }
     const url = this.router.url.split('?')[0] + '?' + queryParams;
     this.router.navigateByUrl(url);
   }
+
 
 
   updateCheckboxes() {
@@ -211,7 +219,7 @@ export class GhostsListComponent implements OnInit {
   onEnterPress() {
     const inputElement = this.searchField.nativeElement;
     inputElement.blur();
-}
+  }
 
 
 }

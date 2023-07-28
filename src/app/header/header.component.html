@@ -6,12 +6,30 @@
     <h1>{{ 'PHASMOPHOBIA_JOURNAL' | translate }}</h1>
   </div>
   <div class="navigation">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
+
+
     <!--
       <a mat-button routerLink="/items" class="navitem">{{'ITEMS' | translate}}</a>
       <a mat-button routerLink="/maps" class="navitem">{{'MAPS' | translate}}</a>
-    -->
       <a mat-button routerLink="/ghosts" class="navitem">{{'GHOSTS' | translate}}</a>
-    <!--
+
       <select (change)="changeLanguage($event)" class="navitems" >
       <option [value]="'en'" [selected]="getCurrentLanguage() === 'en'">{{ 'ENGLISH' | translate }}</option>
       <option [value]="'de'" [selected]="getCurrentLanguage() === 'de'">{{ 'GERMAN' | translate }}</option>

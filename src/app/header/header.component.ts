@@ -1,5 +1,6 @@
 import { Component, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { LanguageService } from '../language.service';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-header',

@@ -2,7 +2,8 @@
   <div class="filter">
 
     <mat-form-field class="inputField">
-      <input #searchField matInput (keyup)="applyFilter($event)" (keyup.enter)="onEnterPress()" placeholder="Search Ghosts" />
+      <input #searchField matInput (keyup)="applyFilter($event)" (keyup.enter)="onEnterPress()"
+        placeholder="Search Ghosts" />
     </mat-form-field>
     <div class="filteritems">
       <div class="EVIDENCEBOX">
@@ -102,6 +103,6 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="mat-row"></tr>
     </table>
+    <div class="loadingPlaceholder" *ngIf="isLoading">Loading...</div>
   </div>
 </div>
-
