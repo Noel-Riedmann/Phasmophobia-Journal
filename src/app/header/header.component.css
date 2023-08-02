@@ -50,29 +50,25 @@ select:hover {
   cursor: pointer;
 }
 
-
-
-
-
 @media only screen and (max-width: 640px) {
   .logo {
     display: none;
   }
 
   .headline {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 @media only screen and (max-width: 1199px) {
 
-  .textMenu {
+  .textMenu{
     display: none;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .burgerMenu {
+  .burgerMenu , #mobileLightTheme {
     display: none;
   }
 }

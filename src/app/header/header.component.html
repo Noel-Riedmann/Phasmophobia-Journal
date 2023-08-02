@@ -7,11 +7,12 @@
     <h1>{{ 'PHASMOPHOBIA_JOURNAL' | translate }}</h1>
   </div>
   <div class="navigation">
+    <a (click)="toggleTheme()" class="toggleTheme" id="mobileLightTheme"><mat-icon>highlight</mat-icon>&nbsp;&nbsp;</a>
     <a class="burgerMenu" routerLink="navigation/menu"><mat-icon>menu</mat-icon></a>
     <div class="textMenu">
       <a mat-button routerLink="/ghosts" class="navitem">{{'GHOSTS' | translate}}</a>
       <a mat-button routerLink="/cursed-possesions" class="navitem">{{'CURSED-POSSESSIONS' | translate}}</a>
-      <a (click)="toggleTheme()" class="toggleTheme"><mat-icon>highlight</mat-icon></a>
+      <a (click)="toggleTheme()" class="toggleTheme">&nbsp;&nbsp;<mat-icon>highlight</mat-icon></a>
     </div>
   </div>
 
