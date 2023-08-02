@@ -36,16 +36,24 @@ a {
   border-radius: 15px;
 }
 
-.clearbtn:hover{
+.clearbtn:hover, .backbtn:hover{
   cursor: pointer;
   transition: .3s;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: var(--button-hover-box-shadow);
 }
+
 
 #cursed-possession-item{
   background-color: var(--cursed-possession-item-background-color);
   border-color: var(--cursed-possession-item-border-color);
 }
+
+.mat-mdc-form-field-input-control.mat-mdc-form-field-input-control{
+  color: var(--text-color);
+  caret-color: var(--text-color);
+}
+
+
 
 :root {
   --background-image: url('src/assets/images/background.png');
@@ -54,6 +62,7 @@ a {
   --button-background-color: #53131E;
   --cursed-possession-item-background-color: rgba(0, 0, 0, 0.479);
   --cursed-possession-item-border-color: black;
+  --button-hover-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 [data-theme='dark'] {
@@ -63,7 +72,9 @@ a {
   --button-background-color: #6b6b6b;
   --cursed-possession-item-background-color: #6b6b6b;
   --cursed-possession-item-border-color: gray;
+  --button-hover-box-shadow: 0 12px 16px 0 rgba(196, 196, 196, 0.158),0 17px 50px 0 rgba(196, 196, 196, 0.116);
 }
+
 
 
 

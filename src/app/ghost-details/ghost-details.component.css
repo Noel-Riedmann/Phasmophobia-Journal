@@ -48,6 +48,10 @@ p {
   margin-top: 10px;
 }
 
+.backbtn:hover{
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
   .info {
     display: flex;
