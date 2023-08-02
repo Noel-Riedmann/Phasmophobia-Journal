@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./cursed-possesions.component.css']
 })
 export class CursedPossesionsComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
-  goTo(location :string){
+  goTo(location: string): void {
     this.router.navigate(['cursed-possesions/tarot-cards']);
   }
+
 }

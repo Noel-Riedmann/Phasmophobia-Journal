@@ -24,6 +24,7 @@
   position: fixed;
   right: 15px;
   bottom: 15px;
+  font-size: 18px;
 }
 
 @media (max-width: 640px) {

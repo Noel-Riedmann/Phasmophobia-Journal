@@ -11,4 +11,8 @@ export class TarotCardsComponent {
   goBack(){
     this.router.navigate(['cursed-possesions']);
   }
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 }
