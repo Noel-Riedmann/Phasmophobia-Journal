@@ -221,6 +221,5 @@ export class GhostsListComponent implements OnInit {
     inputElement.blur();
   }
 
-
 }
 

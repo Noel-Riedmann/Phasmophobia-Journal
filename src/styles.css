@@ -10,8 +10,7 @@
 }
 
 body{
-  background: url('src/assets/images/background.png');
-
+  background: var(--background-image);
   font-family: PhasmophobiaJournalFont;
   font-size: 22px;
 
@@ -22,3 +21,51 @@ body{
 body::-webkit-scrollbar{
   display: none;
 }
+
+div,
+a {
+  color: var(--text-color);
+}
+
+.clearbtn, .backbtn
+{
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border-style: none;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.clearbtn:hover{
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#cursed-possession-item{
+  background-color: var(--cursed-possession-item-background-color);
+  border-color: var(--cursed-possession-item-border-color);
+}
+
+:root {
+  --background-image: url('src/assets/images/background.png');
+  --text-color: #000;
+  --button-text-color: #fff;
+  --button-background-color: #53131E;
+  --cursed-possession-item-background-color: rgba(0, 0, 0, 0.479);
+  --cursed-possession-item-border-color: black;
+}
+
+[data-theme='dark'] {
+  --background-image: url('src/assets/images/background-dark.png');
+  --text-color: #cfcfcf;
+  --button-text-color: #cfcfcf;
+  --button-background-color: #6b6b6b;
+  --cursed-possession-item-background-color: #6b6b6b;
+  --cursed-possession-item-border-color: gray;
+}
+
+
+
+
+

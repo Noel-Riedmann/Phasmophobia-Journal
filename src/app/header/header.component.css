@@ -34,7 +34,7 @@
 }
 
 .navitem {
-  color: black;
+
   margin-left: 15px;
 }
 
@@ -50,9 +50,7 @@ select:hover {
   cursor: pointer;
 }
 
-a{
-  color: black;
-}
+
 
 
 
@@ -78,3 +76,13 @@ a{
     display: none;
   }
 }
+
+.toggleTheme:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+

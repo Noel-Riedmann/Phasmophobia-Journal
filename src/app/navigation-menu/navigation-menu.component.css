@@ -16,3 +16,9 @@ a {
 .mat-icon {
   scale: 2;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+  div, a{
+    color: #cfcfcf;
+  }
+}

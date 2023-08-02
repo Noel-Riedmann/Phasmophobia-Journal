@@ -28,9 +28,7 @@
     margin: 5px;
   }
 
-  a {
-    color: black;
-  }
+
 
   .bold {
     font-weight: bold;
@@ -57,13 +55,13 @@
     display: flex;
   }
 
-  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
+  .clearbtn,
+  .mat-mdc-raised-button:not(:disabled) {
     font-family: PhasmophobiaJournalFont;
     font-size: 20px;
     margin-left: 20px;
     margin-top: 10px;
-    background-color: #53131E;
-    color: white;
+
   }
 }
 
@@ -99,9 +97,7 @@
     display: block;
   }
 
-  a {
-    color: black;
-  }
+
 
   .bold {
     font-weight: bold;
@@ -129,14 +125,13 @@
     display: flex;
   }
 
-  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
+  .clearbtn,
+  .mat-mdc-raised-button:not(:disabled) {
     font-family: PhasmophobiaJournalFont;
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
-    background-color: #53131E;
-    color: white;
   }
 }
 
@@ -172,9 +167,7 @@
     display: block;
   }
 
-  a {
-    color: black;
-  }
+
 
   .bold {
     font-weight: bold;
@@ -202,16 +195,17 @@
     display: flex;
   }
 
-  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
+  .clearbtn,
+  .mat-mdc-raised-button:not(:disabled) {
     font-family: PhasmophobiaJournalFont;
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
-    background-color: #53131E;
-    color: white;
   }
-  .mat-column-SanityThreshold, .mat-column-Speed {
+
+  .mat-column-SanityThreshold,
+  .mat-column-Speed {
     display: none;
   }
 }
@@ -251,9 +245,7 @@
     display: block;
   }
 
-  a {
-    color: black;
-  }
+
 
   .bold {
     font-weight: bold;
@@ -281,29 +273,36 @@
     display: flex;
   }
 
-  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
+  .clearbtn,
+  .mat-mdc-raised-button:not(:disabled) {
     font-family: PhasmophobiaJournalFont;
     font-size: 20px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
-    background-color: #53131E;
-    color: white;
+
   }
-  .mat-column-SanityThreshold, .mat-column-Speed {
+
+  .mat-column-SanityThreshold,
+  .mat-column-Speed {
     display: none;
   }
-  .evidence{
+
+  .evidence {
     display: block;
     margin: 5px;
   }
 
-  .SANITYTHRESHOLDBOX{
+  .SANITYTHRESHOLDBOX {
     display: none;
   }
 }
 
-.loadingPlaceholder{
+.loadingPlaceholder {
   margin: 20px;
   font-size: 32px;
 }
+
+
+
+
