@@ -23,6 +23,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { CursedPossesionsComponent } from './cursed-possessions/cursed-possesions.component';
+import { TarotCardsComponent } from './cursed-possessions/tarot-cards/tarot-cards.component';
 
 
 
@@ -31,7 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent],
+  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

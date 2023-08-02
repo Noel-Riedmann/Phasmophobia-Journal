@@ -23,7 +23,7 @@ body::-webkit-scrollbar{
 }
 
 div,
-a {
+a, td, tr {
   color: var(--text-color);
 }
 

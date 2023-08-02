@@ -1,0 +1,36 @@
+.fandom-table {
+  border-collapse: collapse;
+  margin: 40px;
+}
+
+.fandom-table th, .fandom-table td {
+  border: 1px solid;
+  padding: 8px;
+}
+
+.fandom-table th:nth-child(4),
+.fandom-table td:nth-child(4),
+.fandom-table th:nth-child(5),
+.fandom-table td:nth-child(5) {
+  width: 12%;
+}
+
+.fandom-table th,
+.fandom-table td {
+  padding-right: 10px;
+}
+
+.backbtn{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}
+
+@media (max-width: 640px) {
+  .fandom-table th:nth-child(2),
+  .fandom-table td:nth-child(2),
+  .fandom-table th:nth-child(4),
+  .fandom-table td:nth-child(4) {
+    display: none;
+  }
+}
