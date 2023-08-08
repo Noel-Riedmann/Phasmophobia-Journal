@@ -240,6 +240,7 @@ export class GhostsListComponent implements OnInit {
     this.updateDisplayedData();
     this.updateCheckboxes();
     this.updateUrl();
+    this.clearInput();
   }
 
   @ViewChild('searchField')
@@ -258,9 +259,9 @@ export class GhostsListComponent implements OnInit {
   }
 
   clearInput() {
-    this.myControl.setValue(''); // Clear the input value
-    this.autocompleteOptionsVisible = false; // Hide autocomplete options
-    this.applyFilter(new Event('input')); // Apply the filter to update the displayed data
+    this.myControl.setValue('');
+    this.autocompleteOptionsVisible = false;
   }
+
 }
 
