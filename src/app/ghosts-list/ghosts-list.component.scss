@@ -1,373 +1,249 @@
-@media only screen and (min-width: 1200px) {
-  .container {
-    display: flex;
-  }
-
+@media only screen and (min-width:1200px) {
+  input::-webkit-search-cancel-button {
+      width: 7%
+ }
+  .container, .sanityThreshold-container {
+      display: flex
+ }
   .filter {
-    width: 20%;
-    height: 100%;
-    padding: 10px;
-  }
-
+      width: 20%;
+      height: 100%;
+      padding: 10px
+ }
   .list {
-    width: 80%;
-    padding: 10px;
-    padding-right: 20px;
-  }
-
+      width: 80%;
+      padding: 10px 20px 10px 10px
+ }
   .inputField {
-    padding-left: 20px;
-    padding-top: 35px;
-    max-width: 100%;
-    color: white;
-  }
-
-  .autocomplete-options {
-    display: none;
-  }
-
-  .autocomplete-option {
-    display: none;
-  }
-
-  .evidence,
-  .speed,
-  .sanityThreshold {
-    display: block;
-    margin: 5px;
-  }
-
-
-
+      padding-left: 20px;
+      padding-top: 35px;
+      max-width: 100%;
+      color: #fff
+ }
+  .autocomplete-option, .autocomplete-options {
+      display: none
+ }
+  .evidence, .sanityThreshold, .speed {
+      display: block;
+      margin: 5px
+ }
   .bold {
-    font-weight: bold;
-  }
-
-  .evidence-checkbox,
-  .evidencehead,
-  .speed-checkbox,
-  .sanityThreshold-checkbox {
-    margin-bottom: 15px;
-    margin-left: 20px;
-  }
-
-  .evidencehead,
-  .speedhead,
-  .sanityThresholdhead {
-    font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-  }
-
-  .sanityThreshold-container {
-    display: flex;
-  }
-
-  .clearbtn,
-  .mat-mdc-raised-button:not(:disabled) {
-    font-family: PhasmophobiaJournalFont;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-top: 10px;
-
-  }
+      font-weight: 700
+ }
+  .evidence-checkbox, .evidencehead, .sanityThreshold-checkbox, .speed-checkbox {
+      margin-bottom: 15px;
+      margin-left: 20px
+ }
+  .evidencehead, .sanityThresholdhead, .speedhead {
+      font-weight: 700;
+      margin-left: 20px;
+      margin-bottom: 15px;
+      margin-top: 10px
+ }
+  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
+      font-family: PhasmophobiaJournalFont;
+      font-size: 20px;
+      margin-left: 20px;
+      margin-top: 10px
+ }
 }
-
-/* Medium screens (max-width: 1200px) and (min-width: 768px) */
-@media only screen and (max-width: 1199px) and (min-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
+@media only screen and (max-width:1199px) and (min-width:768px) {
+  .container, .filter {
+      display: flex;
+      flex-direction: column
+ }
   .filteritems {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    justify-content: space-between;
-  }
-
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      justify-content: space-between
+ }
   .inputField {
-    padding: 20px;
-    padding-top: 40px;
-    max-width: 100%;
-  }
-
+      padding: 40px 20px 20px;
+      max-width: 100%
+ }
+  input::-webkit-search-cancel-button {
+      width: 15px
+ }
   .autocomplete-options {
-    position: absolute;
-    width: 90%;
-    top: 122px;
-    z-index: 1;
-    left: 1%;
-    border-radius: 10px;
-  }
-
+      position: absolute;
+      width: 90%;
+      top: 122px;
+      z-index: 1;
+      left: 1%;
+      border-radius: 10px
+ }
   .autocomplete-option {
-    padding: 12px;
-    cursor: pointer;
-    border-radius: 10px;
-
-  }
-
-  .filter {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .evidence,
-  .speed,
-  .sanityThreshold {
-    display: block;
-  }
-
-
-
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 10px
+ }
+  .evidence, .sanityThreshold, .speed {
+      display: block
+ }
   .bold {
-    font-weight: bold;
-  }
-
-  .evidence-checkbox,
-  .evidencehead,
-  .speed-checkbox,
-  .sanityThreshold-checkbox {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 15px;
-  }
-
-  .evidencehead,
-  .speedhead,
-  .sanityThresholdhead {
-    font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-  }
-
+      font-weight: 700
+ }
+  .evidence-checkbox, .evidencehead, .sanityThreshold-checkbox, .speed-checkbox {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 15px
+ }
+  .evidencehead, .sanityThresholdhead, .speedhead {
+      font-weight: 700;
+      margin-left: 20px;
+      margin-bottom: 15px;
+      margin-top: 10px
+ }
   .sanityThreshold-container {
-    display: flex;
-  }
-
-  .clearbtn,
-  .mat-mdc-raised-button:not(:disabled) {
-    font-family: PhasmophobiaJournalFont;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-  }
+      display: flex
+ }
+  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
+      font-family: PhasmophobiaJournalFont;
+      font-size: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 10px
+ }
 }
-
-/* Small screens (max-width: 768px) and (min-width: 480px) */
-@media only screen and (max-width: 768px) and (min-width: 480px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
+@media only screen and (max-width:768px) and (min-width:480px) {
+  .container, .filter {
+      display: flex;
+      flex-direction: column
+ }
   .filteritems {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    justify-content: space-between;
-  }
-
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      justify-content: space-between
+ }
   .inputField {
-    padding: 20px;
-    padding-top: 40px;
-    max-width: 100%;
-  }
-
+      padding: 40px 20px 20px;
+      max-width: 100%
+ }
+  input::-webkit-search-cancel-button {
+      width: 15px
+ }
   .autocomplete-options {
-    position: absolute;
-    width: 90%;
-    top: 122px;
-    left: 5%;
-    z-index: 1;
-    border-radius: 10px;
-  }
-
+      position: absolute;
+      width: 90%;
+      top: 122px;
+      left: 5%;
+      z-index: 1;
+      border-radius: 10px
+ }
   .autocomplete-option {
-    padding: 12px;
-    cursor: pointer;
-    border-radius: 10px;
-
-  }
-
-  .filter {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .evidence,
-  .speed,
-  .sanityThreshold {
-    display: block;
-  }
-
-
-
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 10px
+ }
+  .evidence, .sanityThreshold, .speed {
+      display: block
+ }
   .bold {
-    font-weight: bold;
-  }
-
-  .evidence-checkbox,
-  .evidencehead,
-  .speed-checkbox,
-  .sanityThreshold-checkbox {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 15px;
-  }
-
-  .evidencehead,
-  .speedhead,
-  .sanityThresholdhead {
-    font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-  }
-
+      font-weight: 700
+ }
+  .evidence-checkbox, .evidencehead, .sanityThreshold-checkbox, .speed-checkbox {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 15px
+ }
+  .evidencehead, .sanityThresholdhead, .speedhead {
+      font-weight: 700;
+      margin-left: 20px;
+      margin-bottom: 15px;
+      margin-top: 10px
+ }
   .sanityThreshold-container {
-    display: flex;
-  }
-
-  .clearbtn,
-  .mat-mdc-raised-button:not(:disabled) {
-    font-family: PhasmophobiaJournalFont;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-  }
-
-  .mat-column-SanityThreshold,
-  .mat-column-Speed {
-    display: none;
-  }
+      display: flex
+ }
+  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
+      font-family: PhasmophobiaJournalFont;
+      font-size: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 10px
+ }
+  .mat-column-SanityThreshold, .mat-column-Speed {
+      display: none
+ }
 }
-
-/* Extra small screens (max-width: 480px) */
-@media only screen and (max-width: 480px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
+@media only screen and (max-width:480px) {
+  .container, .filter {
+      display: flex;
+      flex-direction: column
+ }
   .filteritems {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    justify-content: space-between;
-  }
-
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      justify-content: space-between
+ }
   .inputField {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 40px;
-    max-width: 100%;
-  }
-
-  .inputField {
-    padding: 20px;
-    padding-top: 40px;
-    max-width: 100%;
-  }
-
+      padding: 40px 20px 20px;
+      max-width: 100%
+ }
+  input::-webkit-search-cancel-button {
+      width: 15px
+ }
   .autocomplete-options {
-    position: absolute;
-    width: 90%;
-    top: 102px;
-    left: 4%;
-    z-index: 1;
-    border-radius: 10px;
-  }
-
+      position: absolute;
+      width: 90%;
+      top: 102px;
+      left: 4%;
+      z-index: 1;
+      border-radius: 10px
+ }
   .autocomplete-option {
-    padding: 12px;
-    cursor: pointer;
-    border-radius: 10px;
-
-  }
-
-  .filter {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .evidence,
-  .speed,
-  .sanityThreshold {
-    display: block;
-  }
-
-
-
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 10px
+ }
+  .evidence, .sanityThreshold, .speed {
+      display: block
+ }
   .bold {
-    font-weight: bold;
-  }
-
-  .evidence-checkbox,
-  .evidencehead,
-  .speed-checkbox,
-  .sanityThreshold-checkbox {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 15px;
-  }
-
-  .evidencehead,
-  .speedhead,
-  .sanityThresholdhead {
-    font-weight: bold;
-    margin-left: 20px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-  }
-
+      font-weight: 700
+ }
+  .evidence-checkbox, .evidencehead, .sanityThreshold-checkbox, .speed-checkbox {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 15px
+ }
+  .evidencehead, .sanityThresholdhead, .speedhead {
+      font-weight: 700;
+      margin-left: 20px;
+      margin-bottom: 15px;
+      margin-top: 10px
+ }
   .sanityThreshold-container {
-    display: flex;
-  }
-
-  .clearbtn,
-  .mat-mdc-raised-button:not(:disabled) {
-    font-family: PhasmophobiaJournalFont;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-
-  }
-
-  .mat-column-SanityThreshold,
-  .mat-column-Speed {
-    display: none;
-  }
-
+      display: flex
+ }
+  .clearbtn, .mat-mdc-raised-button:not(:disabled) {
+      font-family: PhasmophobiaJournalFont;
+      font-size: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 10px
+ }
+  .SANITYTHRESHOLDBOX, .mat-column-SanityThreshold, .mat-column-Speed {
+      display: none
+ }
   .evidence {
-    display: block;
-    margin: 5px;
-  }
-
-  .SANITYTHRESHOLDBOX {
-    display: none;
-  }
+      display: block;
+      margin: 5px
+ }
 }
-
 .loadingPlaceholder {
   margin: 20px;
-  font-size: 32px;
+  font-size: 32px
 }
-
-
 .inputField .mat-input-element {
-  color: white;
-  caret-color: white;
+  color: #fff;
+  caret-color: white
 }

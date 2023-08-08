@@ -257,14 +257,10 @@ export class GhostsListComponent implements OnInit {
     this.autocompleteOptionsVisible = false;
   }
 
-
-
-
-
-
-
-
-
-
+  clearInput() {
+    this.myControl.setValue(''); // Clear the input value
+    this.autocompleteOptionsVisible = false; // Hide autocomplete options
+    this.applyFilter(new Event('input')); // Apply the filter to update the displayed data
+  }
 }
 
