@@ -1,0 +1,14 @@
+.container{
+  margin: 2%;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  flex-direction: row;
+}
+
+.introduction{
+  width: 80%;
+}
+
+p{
+  margin-bottom: 50px;
+}
