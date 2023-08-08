@@ -5,6 +5,9 @@ import { MatCheckboxChange } from '@angular/material/checkbox';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
 import { HttpParams } from '@angular/common/http';
+import { map, startWith } from 'rxjs';
+import { FormControl } from '@angular/forms';
+
 
 
 @Component({
@@ -27,6 +30,14 @@ export class GhostsListComponent implements OnInit {
   sanityThresholdChecked: boolean[] = [];
   isLoading: boolean = true;
 
+  myControl = new FormControl();
+  options: string[] = [];
+  allOptions: string[] = [];
+
+  autocompleteOptionsVisible: boolean = true;
+
+
+
 
 
 
@@ -37,6 +48,14 @@ export class GhostsListComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadGhosts();
+
+    this.myControl.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      )
+      .subscribe((filteredOptions: string[]) => this.options = filteredOptions);
+
     this.ghostService.getGhosts().subscribe(ghosts => {
       let evidenceNames: string[] = [];
       let speedNames: string[] = [];
@@ -75,6 +94,12 @@ export class GhostsListComponent implements OnInit {
         this.updateCheckboxes();
       });
     });
+  }
+
+
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+    return this.allOptions.filter(option => option.toLowerCase().includes(filterValue));
   }
 
 
@@ -140,6 +165,8 @@ export class GhostsListComponent implements OnInit {
         this.isLoading = false;
         this.updateDisplayedData();
         this.updateCheckboxes();
+
+        this.allOptions = this.allGhosts.map(ghost => ghost.name);
       },
       (error) => {
         console.error('Error fetching ghosts:', error);
@@ -149,8 +176,9 @@ export class GhostsListComponent implements OnInit {
   }
 
 
+
   applyFilter(event: Event) {
-    console.log('applyFilter called with:', event);
+    // console.log('applyFilter called with:', event);
     const filterValue = (event.target as HTMLInputElement).value;
     let filteredGhosts = this.allGhosts.filter(ghost => {
       return (
@@ -220,6 +248,23 @@ export class GhostsListComponent implements OnInit {
     const inputElement = this.searchField.nativeElement;
     inputElement.blur();
   }
+
+
+  onAutocompleteOptionClick(event: Event, option: string) {
+    event.stopPropagation();
+    this.myControl.setValue(option);
+    this.searchField.nativeElement.dispatchEvent(new Event('input'));
+    this.autocompleteOptionsVisible = false;
+  }
+
+
+
+
+
+
+
+
+
 
 }
 

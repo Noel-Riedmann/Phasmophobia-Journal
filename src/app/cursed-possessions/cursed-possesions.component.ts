@@ -10,7 +10,7 @@ export class CursedPossesionsComponent {
   constructor(private router: Router) { }
 
   goTo(location: string): void {
-    this.router.navigate(['cursed-possesions/tarot-cards']);
+    this.router.navigate(['cursed-possessions/tarot-cards']);
   }
 
 }

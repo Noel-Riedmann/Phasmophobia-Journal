@@ -16,10 +16,18 @@
   }
 
   .inputField {
-    padding: 20px;
+    padding-left: 20px;
     padding-top: 35px;
     max-width: 100%;
     color: white;
+  }
+
+  .autocomplete-options {
+    display: none;
+  }
+
+  .autocomplete-option {
+    display: none;
   }
 
   .evidence,
@@ -85,6 +93,22 @@
     padding: 20px;
     padding-top: 40px;
     max-width: 100%;
+  }
+
+  .autocomplete-options {
+    position: absolute;
+    width: 90%;
+    top: 122px;
+    z-index: 1;
+    left: 1%;
+    border-radius: 10px;
+  }
+
+  .autocomplete-option {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+
   }
 
   .filter {
@@ -155,6 +179,22 @@
     padding: 20px;
     padding-top: 40px;
     max-width: 100%;
+  }
+
+  .autocomplete-options {
+    position: absolute;
+    width: 90%;
+    top: 122px;
+    left: 5%;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .autocomplete-option {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+
   }
 
   .filter {
@@ -235,6 +275,28 @@
     max-width: 100%;
   }
 
+  .inputField {
+    padding: 20px;
+    padding-top: 40px;
+    max-width: 100%;
+  }
+
+  .autocomplete-options {
+    position: absolute;
+    width: 90%;
+    top: 102px;
+    left: 4%;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  .autocomplete-option {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+
+  }
+
   .filter {
     display: flex;
     flex-direction: column;
@@ -307,7 +369,5 @@
 
 .inputField .mat-input-element {
   color: white;
-  caret-color: white;}
-
-
-
+  caret-color: white;
+}

@@ -11,8 +11,8 @@ const routes: Routes = [
   { path: 'ghosts', component: GhostsListComponent },
   { path: 'ghosts/details/:id', component: GhostDetailsComponent },
   { path: 'navigation/menu', component: NavigationMenuComponent },
-  { path: 'cursed-possesions', component: CursedPossesionsComponent },
-  {path: 'cursed-possesions/tarot-cards', component: TarotCardsComponent}
+  { path: 'cursed-possessions', component: CursedPossesionsComponent },
+  {path: 'cursed-possessions/tarot-cards', component: TarotCardsComponent}
 ];
 
 @NgModule({

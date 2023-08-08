@@ -1,10 +1,25 @@
 <div class="container">
   <div class="filter">
-
     <mat-form-field class="inputField">
-      <input #searchField matInput (keyup)="applyFilter($event)" (keyup.enter)="onEnterPress()"
-        placeholder="Search Ghosts" />
+      <input #searchField
+       matInput
+       (input)= "applyFilter($event)"
+       (input)= "autocompleteOptionsVisible = true"
+       [formControl]="myControl"
+       placeholder="Search Ghosts"
+       />
+
     </mat-form-field>
+
+    <div class="autocomplete-options" *ngIf="autocompleteOptionsVisible && myControl.value && options.length > 0">
+      <div *ngFor="let option of options" class="autocomplete-option" (click)="onAutocompleteOptionClick($event, option)">
+        {{ option }}
+      </div>
+    </div>
+
+
+
+
     <div class="filteritems">
       <div class="EVIDENCEBOX">
         <div class="evidencehead">Evidence</div>
@@ -49,7 +64,7 @@
         </div>
       </div>
     </div>
-    <button  class="clearbtn" (click)="clearAllFilters()">Clear All Filters</button>
+    <button class="clearbtn" (click)="clearAllFilters()">Clear All Filters</button>
 
 
 
@@ -103,6 +118,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="mat-row"></tr>
     </table>
-    <div class="loadingPlaceholder" *ngIf="isLoading">Loading...</div>
+    <div class="loadingPlaceholder" *ngIf="isLoading">Loading... <br> This might take a bit! <br> If you still see no
+      ghosts after waiting for a while try reloading the page(f5).</div>
   </div>
 </div>

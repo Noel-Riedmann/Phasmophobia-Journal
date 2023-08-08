@@ -24,6 +24,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 import { CursedPossesionsComponent } from './cursed-possessions/cursed-possesions.component';
 import { TarotCardsComponent } from './cursed-possessions/tarot-cards/tarot-cards.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 
 
 
@@ -58,6 +60,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatTableModule,
     FormsModule,
     ReactiveFormsModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent],

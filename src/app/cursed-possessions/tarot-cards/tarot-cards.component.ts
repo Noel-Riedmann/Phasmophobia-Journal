@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class TarotCardsComponent {
   constructor(private router: Router) {}
   goBack(){
-    this.router.navigate(['cursed-possesions']);
+    this.router.navigate(['cursed-possessions']);
   }
 
   ngOnInit(): void {

@@ -20,8 +20,6 @@
   cursor: pointer;
 }
 
-
-
 @media only screen and (min-width: 1000px) {
 
   .item:hover {
@@ -30,7 +28,7 @@
 
 }
 
-.all {
+.cursed-possession-items {
   margin: 40px;
 }
 
