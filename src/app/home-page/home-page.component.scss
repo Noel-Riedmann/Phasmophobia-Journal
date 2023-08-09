@@ -1,14 +1,15 @@
-.container{
+.container {
   margin: 2%;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: flex;
   flex-direction: row;
 }
 
-h2{
+h2 {
   margin-bottom: .8%;
   font-size: 1.9em;
 }
+
 .text {
   a {
     text-decoration: underline;
@@ -16,16 +17,16 @@ h2{
   }
 }
 
-.nav{
+.nav {
   margin-left: 2%;
   font-weight: bold;
 
-  li{
+  li {
     font-family: PhasmophobiaJournalFont;
   }
 }
 
-li{
+li {
   margin-bottom: 1.5em;
   margin-top: 1em;
   font-size: x-large;
@@ -34,28 +35,60 @@ li{
     scale: 2;
   }
 }
+
 @media only screen and (min-width: 1800px) {
-  .text{
+  .text {
     width: 78%;
   }
+
+
+  #cursed-possessions-2 {
+    display: none
+  }
 }
 
-@media only screen and (min-width: 641px) {
-  .mobile-nav{
+@media only screen and (max-width: 1799px) {
+  #cursed-possessions-1 {
+    display: none
+  }
+
+  .text{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #cursed-possessions-1 {
+    display: none
+  }
+
+  .text{
+    width: 70%;
+  }
+}
+
+
+@media only screen and (min-width: 661px) {
+  .mobile-nav {
     display: none;
   }
 }
 
-@media only screen and (max-width: 640px) {
-  .nav{
+@media only screen and (max-width: 660px) {
+  .nav {
     display: none;
   }
-  h2{
+
+  h2 {
     font-size: 1.3em;
   }
 
-  .container{
+  .container {
     margin: 5%;
     margin-top: 8%;
   }
+
+.text{
+  width: 100%;
+}
 }

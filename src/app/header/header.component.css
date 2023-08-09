@@ -18,12 +18,13 @@
   margin-top: 10px;
 }
 
-.headline {
+.headline,
+.mat-toolbar h1 {
   flex: 1;
   text-align: center;
   font-family: PhasmophobiaFont;
   letter-spacing: 3px;
-  font-size: 20px;
+  font-size: 1.3em;
 }
 
 .navigation {
@@ -59,30 +60,27 @@ select:hover {
     display: none;
   }
 
-  .headline {
-    font-size: 12px;
+  .headline,
+.mat-toolbar h1 {
+    font-size: 24px;
   }
 }
 
 @media only screen and (max-width: 1199px) {
 
-  .textMenu{
+  .textMenu {
     display: none;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .burgerMenu , #mobileLightTheme {
+
+  .burgerMenu,
+  #mobileLightTheme {
     display: none;
   }
 }
 
-.toggleTheme:hover{
+.toggleTheme:hover {
   cursor: pointer;
 }
-
-
-
-
-
-

@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     MatInputModule,
     MatFormFieldModule,
+    MatToolbarModule,
     MatSelectModule,
     MatMenuModule,
     MatCheckboxModule,
