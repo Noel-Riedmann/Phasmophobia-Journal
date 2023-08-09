@@ -48,9 +48,10 @@ p {
   margin-top: 10px;
 }
 
-.backbtn:hover{
+.backbtn:hover {
   cursor: pointer;
 }
+
 
 @media only screen and (max-width: 768px) {
   .info {
@@ -58,27 +59,26 @@ p {
     flex-direction: column;
   }
 
-  .right{
+  .right {
     display: flex;
   }
 
-  .rightitem{
+  .rightitem {
     margin: 10px;
   }
 
-  .left{
+  .left {
     width: 100%;
   }
 
-  .backbtn{
+  .backbtn {
     position: fixed;
     right: 10px;
     bottom: 10px;
   }
 }
 
-.loadingPlaceholder{
+.loadingPlaceholder {
   margin: 20px;
   font-size: 32px;
 }
-
