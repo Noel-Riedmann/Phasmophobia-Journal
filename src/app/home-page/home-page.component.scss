@@ -1,0 +1,61 @@
+.container{
+  margin: 2%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+h2{
+  margin-bottom: .8%;
+  font-size: 1.9em;
+}
+.text {
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
+
+.nav{
+  margin-left: 2%;
+  font-weight: bold;
+
+  li{
+    font-family: PhasmophobiaJournalFont;
+  }
+}
+
+li{
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+  font-size: x-large;
+
+  .mat-icon {
+    scale: 2;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .text{
+    width: 78%;
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .mobile-nav{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .nav{
+    display: none;
+  }
+  h2{
+    font-size: 1.3em;
+  }
+
+  .container{
+    margin: 5%;
+    margin-top: 8%;
+  }
+}

@@ -26,6 +26,8 @@ import { CursedPossesionsComponent } from './cursed-possessions/cursed-possesion
 import { TarotCardsComponent } from './cursed-possessions/tarot-cards/tarot-cards.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+import { ActiveLinkDirective } from './active-link.directive';
 
 
 
@@ -35,7 +37,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent, HomePageComponent],
+  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent, HomePageComponent, AboutPageComponent, ActiveLinkDirective],
   imports: [
     BrowserModule,
     HttpClientModule,

@@ -6,15 +6,17 @@ import { GhostDetailsComponent } from './ghost-details/ghost-details.component';
 import { CursedPossesionsComponent } from './cursed-possessions/cursed-possesions.component';
 import { TarotCardsComponent } from './cursed-possessions/tarot-cards/tarot-cards.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'ghosts', pathMatch: 'full' },
+  {path: '', component: HomePageComponent},
+  { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'ghosts', component: GhostsListComponent },
   { path: 'ghosts/details/:id', component: GhostDetailsComponent },
   { path: 'navigation/menu', component: NavigationMenuComponent },
   { path: 'cursed-possessions', component: CursedPossesionsComponent },
   {path: 'cursed-possessions/tarot-cards', component: TarotCardsComponent},
-  {path: 'home', component: HomePageComponent}
+  {path: 'about', component: AboutPageComponent}
 ];
 
 @NgModule({

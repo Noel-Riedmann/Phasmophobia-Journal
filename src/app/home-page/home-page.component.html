@@ -1,47 +1,25 @@
 <div class="container">
-  <div class="introduction">
-    <h1>ABOUT THIS PAGE //make this own component//</h1>
-    <h1>Your Definitive Guide to the Paranormal</h1>
-    <p>Step into the eerie realm of the Phasmophobia Journal, a creation born solely from the passion of its maker,
-      Noel. As a solo endeavor, this journal has been meticulously crafted to provide unwavering support and knowledge
-      to the entire Phasmophobia community.</p>
-
-    <h2>Discover the Secrets of Phasmophobia</h2>
-    <p>What is the Phasmophobia Journal all about? It's your ultimate companion in the world of Phasmophobia – a game
-      that invites you to step into the shoes of a fearless ghost hunter. The journal serves as your go-to source for
-      unraveling the mysteries that lay beyond our realm.</p>
-
-    <h2>A Comprehensive Ghost Encyclopedia</h2>
-    <p>Picture this: A meticulously organized list of ghosts, each brought to life with intricate details that set them
-      apart. But that's just the beginning – what truly makes the Phasmophobia Journal special is its interactivity and
-      depth of information.</p>
-
-    <h3>Tailored Investigation Tools</h3>
-    <p>Imagine being able to filter these ghosts based on the evidence they leave behind, their speed, and their sanity
-      threshold. With a few clicks, you can uncover exactly what you need to prepare for your encounters. And if you're
-      in search of a particular ghost, our intuitive search feature is at your service.</p>
-
-    <h3>Unveil Ghost Histories</h3>
-    <p>But wait, there's more! Delve deeper into the spirit world by clicking on a ghost's entry. A treasure trove of
-      knowledge awaits – from their history to their strengths and weaknesses, you'll be armed with insights that could
-      very well tip the scales in your favor.</p>
-
-    <h2>Unravel the Realm of Cursed Possessions</h2>
-    <p>Beyond the chilling encounters, the Phasmophobia Journal also invites you to explore the realm of cursed
-      possessions. Delve into the enigmatic world of cursed items and immerse yourself in the significance of tarot
-      cards. Whether you're curious about the cursed or eager to decode the tarot's secrets, this journal holds the key.
+  <div class="text">
+    <h2 style="font-family: PhasmophobiaJournalFont;">Welcome to the Phasmophobia Journal!</h2>
+    <p>This is your hub for identifying ghosts. To get started, head over to the <a routerLink="/ghosts">Ghosts</a>
+      section within the Phasmophobia Journal to explore a list of all known ghosts. Click on a specific ghost to learn
+      more about its details.</p>
+    <p><br>If you're interested in <a routerLink="/cursed-possessions">cursed possessions</a> you'll find more
+      information within the Phasmophobia Journal as well.</p>
+    <p><br>You can customize the page theme by clicking the <mat-icon>highlight</mat-icon> icon in the top right corner
+      of the Phasmophobia Journal.</p>
+    <p class="mobile-nav"><br>For easy navigation, access the <a routerLink="/navigation/menu">menu</a> by tapping the
+      <mat-icon>menu</mat-icon> icon in the top right corner of the Phasmophobia Journal.
     </p>
-
-    <h2>A Personal Commitment to Excellence</h2>
-    <p>Why is the Phasmophobia Journal unique? It's a personal endeavor – a testament to the commitment and dedication
-      of its creator, Noel. This journal was birthed from the desire to create a platform that not only educates but
-      also unites the Phasmophobia community. Whether you're a seasoned investigator or just setting foot into the
-      unknown, this journal is your trusted guide.</p>
-
-    <h2>Embark on the Journey</h2>
-    <p>So, fellow seeker of the supernatural, join us on this expedition. Unveil the enigmas that dwell in the shadows,
-      confront your fears, and become a master investigator. Let's forge a community that's bound by curiosity and
-      fearlessness. The Phasmophobia Journal is your compass – let it guide you through the unknown. Happy hunting!</p>
+    <p style="font-family: PhasmophobiaJournalFont; font-size: 1.2em;"><br>Happy ghost hunting!</p>
   </div>
-  <app-navigation-menu></app-navigation-menu>
+  <div class="nav">
+    <h3>Navigation</h3>
+    <ul>
+      <li> <a routerLink="/ghosts"><mat-icon>supervisor_account</mat-icon>&nbsp;&nbsp;{{'GHOSTS' | translate}}</a></li>
+      <li> <a routerLink="/cursed-possessions"><mat-icon>extension</mat-icon>&nbsp;&nbsp;{{'CURSED-POSSESSIONS' |
+          translate}}</a></li>
+      <li> <a routerLink="/about"><mat-icon>info</mat-icon>&nbsp;&nbsp;{{'ABOUT' | translate}}</a></li>
+    </ul>
+  </div>
 </div>

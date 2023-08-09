@@ -34,7 +34,7 @@
 }
 
 .navitem {
-
+  font-weight: bold;
   margin-left: 15px;
 }
 
@@ -48,6 +48,10 @@ select {
 
 select:hover {
   cursor: pointer;
+}
+
+.navitem.active {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 640px) {

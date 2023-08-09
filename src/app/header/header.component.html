@@ -10,23 +10,11 @@
     <a (click)="toggleTheme()" class="toggleTheme" id="mobileLightTheme"><mat-icon>highlight</mat-icon>&nbsp;&nbsp;</a>
     <a class="burgerMenu" routerLink="navigation/menu"><mat-icon>menu</mat-icon></a>
     <div class="textMenu">
-      <a mat-button routerLink="/ghosts" class="navitem">{{'GHOSTS' | translate}}</a>
-      <a mat-button routerLink="/cursed-possessions" class="navitem">{{'CURSED-POSSESSIONS' | translate}}</a>
+      <a appActiveLink routerLink="/" class="navitem">{{'HOME' | translate}}</a>
+      <a routerLink="/ghosts" routerLinkActive="active" class="navitem">{{'GHOSTS' | translate}}</a>
+      <a routerLink="/cursed-possessions" routerLinkActive="active" class="navitem">{{'CURSED-POSSESSIONS' | translate}}</a>
+      <a routerLink="/about" routerLinkActive="active" class="navitem">{{'ABOUT' | translate}}</a>
       <a (click)="toggleTheme()" class="toggleTheme">&nbsp;&nbsp;<mat-icon>highlight</mat-icon></a>
     </div>
   </div>
-
-
-  <!--
-      <a mat-button routerLink="/items" class="navitem">{{'ITEMS' | translate}}</a>
-      <a mat-button routerLink="/maps" class="navitem">{{'MAPS' | translate}}</a>
-      <a mat-button routerLink="/ghosts" class="navitem">{{'GHOSTS' | translate}}</a>
-
-      <select (change)="changeLanguage($event)" class="navitems" >
-      <option [value]="'en'" [selected]="getCurrentLanguage() === 'en'">{{ 'ENGLISH' | translate }}</option>
-      <option [value]="'de'" [selected]="getCurrentLanguage() === 'de'">{{ 'GERMAN' | translate }}</option>
-    </select>
-  -->
-
-
 </mat-toolbar>
