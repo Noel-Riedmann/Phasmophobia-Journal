@@ -1,51 +1,59 @@
-.container{
+.container {
   margin: 2rem;
 }
 
-a{
+a {
   text-decoration: underline;
   font-weight: bold;
 }
-ul{
+
+ul {
   list-style-type: disc;
 }
 
-li{
+li {
   margin-left: 45px;
 }
 
-.question-table{
+.question-table {
   border-collapse: collapse;
 }
 
-.question-table th, .question-table, td{
+.question-table th,
+.question-table,
+td {
   border: 1px solid;
   padding: 8px;
 }
 
-.question-table th:nth-child(1),
-.question-table td:nth-child(1),
 .question-table th:nth-child(4),
 .question-table td:nth-child(4),
 .question-table th:nth-child(6),
-.question-table td:nth-child(6){
+.question-table td:nth-child(6) {
   display: none;
 }
-ul{
+
+ul {
   list-style-type: disc;
 }
 
-li{
+li {
   margin-left: 45px;
 }
 
 @media (max-width: 640px) {
+
+  .question-table th:nth-child(1),
+  .question-table td:nth-child(1),
+  .question-table th:nth-child(2),
+  .question-table td:nth-child(2),
   .question-table th:nth-child(5),
-  .question-table td:nth-child(5){
+  .question-table td:nth-child(5) {
     display: none;
   }
 }
-.backbtn{
+
+.backbtn {
   position: fixed;
   right: 15px;
   bottom: 15px;
