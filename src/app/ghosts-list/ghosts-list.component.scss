@@ -1,3 +1,7 @@
+.filter{
+  user-select: none;
+}
+
 @media only screen and (min-width:1200px) {
   input::-webkit-search-cancel-button {
       width: 7%
