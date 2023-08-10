@@ -1,0 +1,14 @@
+.container{
+  margin: 2rem;
+}
+
+a{
+  text-decoration: underline;
+  font-weight: bold;
+}
+.backbtn{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  font-size: 18px;
+}

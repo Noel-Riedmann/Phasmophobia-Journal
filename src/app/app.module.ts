@@ -28,6 +28,13 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ActiveLinkDirective } from './active-link.directive';
+import { HauntedMirrorComponent } from './cursed-possessions/haunted-mirror/haunted-mirror.component';
+import { MonkeyPawComponent } from './cursed-possessions/monkey-paw/monkey-paw.component';
+import { CursedHuntComponent } from './cursed-possessions/cursed-hunt/cursed-hunt.component';
+import { MusicBoxComponent } from './cursed-possessions/music-box/music-box.component';
+import { OuijaBoardComponent } from './cursed-possessions/ouija-board/ouija-board.component';
+import { SummoningCircleComponent } from './cursed-possessions/summoning-circle/summoning-circle.component';
+import { VoodooDollComponent } from './cursed-possessions/voodoo-doll/voodoo-doll.component';
 
 
 
@@ -37,7 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent, HomePageComponent, AboutPageComponent, ActiveLinkDirective],
+  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent, HomePageComponent, AboutPageComponent, ActiveLinkDirective, HauntedMirrorComponent, MonkeyPawComponent, CursedHuntComponent, MusicBoxComponent, OuijaBoardComponent, SummoningCircleComponent, VoodooDollComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

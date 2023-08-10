@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Haunted-Mirror</h1>
+  <p>The mirror can be toggled (default: right click on mouse) while inside the investigation area. When activated, the
+    haunted mirror will show a view of a part of the favourite room as a sweeping panorama, allowing players to locate
+    the room by cross-reference. This view is a live feed of the room, so any lights turned on, items moved, and
+    equipment or players present in the room will be visible. The only exception is the player's own model.</p>
+  <br>
+  <p>Each usage of the haunted mirror drains sanity at a rate of 7.5%/s, or 20% per use, whichever is higher. This means
+    that using the mirror for less than ~2.67 seconds will still drain at least 20% sanity. This includes the animation
+    of raising, but not lowering, the mirror. If the user's sanity reaches zero, the mirror will crack visually and
+    audibly, and the ghost will start a <a routerLink='/cursed-possessions/cursed-hunt'>cursed hunt</a> from its current
+    position. The mirror will lower and cannot be used again.</p>
+</div>
+<button class="backbtn" (click)="goBack()">Go back</button>

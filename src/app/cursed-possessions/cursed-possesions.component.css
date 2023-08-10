@@ -5,6 +5,7 @@
   width: 100%;
 }
 
+
 .item {
   border-style: solid;
   border-width: 2px;
@@ -16,7 +17,7 @@
   padding-inline: 10px;
 }
 
-.tarot-cards:hover{
+.item:hover{
   cursor: pointer;
 }
 

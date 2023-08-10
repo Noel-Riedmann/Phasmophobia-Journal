@@ -1,0 +1,108 @@
+<div class="container">
+  <h1>Monkey Paw</h1>
+  <p>The Monkey Paw grants up to a certain number of wishes depending on the difficulty reward multiplier:</p>
+  <br>
+  <ul>
+    <li>0x - 1.99x: 5 wishes</li>
+    <li>2x - 2.99x: 4 wishes</li>
+    <li>3x or higher: 3 wishes</li>
+  </ul>
+  <br>
+  <p>Upon entering the investigation area, the Monkey Paw's fingers will twitch, indicating it is ready to recieve a
+    prompt, and players can choose to either use voice chat or a text-based UI to make wishes.</p>
+  <br>
+  <ul>
+    <li>If using voice chat, the Monkey Paw will listen to any player granting a wish.</li>
+    <li>If using the text-based UI, the UI will appear upon activation (default: right click on mouse).</li>
+  </ul>
+  <br>
+  <p>Most wishes can be found on tags scattered in Sunny Meadows. Picking a tag up (except for weather and anything
+    wishes) will record the wish in the journal. There is no need to find the wishes to use the Monkey Paw. Each wish
+    can only be used once per contract.</p>
+  <br>
+  <h2>All wishes</h2>
+  <table class="wish-table">
+    <tr>
+      <th>Category</th>
+      <th>Wish</th>
+      <th>Effects</th>
+      <th>Sunny Meadows wish location</th>
+    </tr>
+    <tr>
+      <td>Player</td>
+      <td>I wish to be sane</td>
+      <td>Sets every player to 50% sanity. Passive sanity drain will be multiplied by 1.5, and the ghost's favourite
+        room will be set to a random room.</td>
+      <td>Kitchen</td>
+    </tr>
+    <tr>
+      <td>Player</td>
+      <td>I wish to be safe</td>
+      <td>Opens up the nearest hiding spot. The lights in the player's current room will shatter, and for the rest of
+        the contract the ghost will be able to hear the player who made the wish and sense their active electronics at
+        any range.</td>
+      <td>Matron Office 1</td>
+    </tr>
+    <tr>
+      <td>Player</td>
+      <td>I wish to leave</td>
+      <td>Unlocks all exit doors at any time, including during hunts. The player's speed will be reduced before slowly
+        returning over 5 seconds. Their vision will also be reduced for this duration.</td>
+      <td>Hospital Wing</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>I wish to revive my friend<br>I wish for life</td>
+      <td>Revives a dead player, but the player who made the wish has a 50% chance to die.</td>
+      <td>Classroom</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>I wish for knowledge</td>
+      <td>Removes 1 incorrect evidence and corresponding ghost types from the wisher's journal. The ghost will then
+        start a hunt near the wisher, and they will have muffled audio and reduced vision until death or when the round
+        ends.</td>
+      <td>Restricted Wing</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>I wish for [weather]<br>Sun<br>Rain<br>Clear Sky<br>Fog<br>Snow<br>Wind</td>
+      <td>Changes the weather as desired. This will cause a temporary blindness effect while the weather changes and
+        deduct 25% sanity from the player. Wishing for rain has a 50/50 chance of granting either light or heavy rain.
+      </td>
+      <td>Morgue</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>I wish for anything</td>
+      <td>Randomly grants one of the (unused) wishes above.</td>
+      <td>Waiting Room</td>
+    </tr>
+    <tr>
+      <td>Ghost</td>
+      <td>I wish to see the ghost</td>
+      <td>Triggers a ghost event in front of the player: the ghost will materialize before them as their vision is
+        obscured with a dark fog. The ghost will remain still for around 5 seconds before it disappears and triggers a
+        <a routerLink='/cursed-possessions/cursed-hunt'>cursed hunt</a> at its summon location.</td>
+      <td>Manager Office</td>
+    </tr>
+    <tr>
+      <td>Ghost</td>
+      <td>I wish for activity<br>I wish the ghost would do something</td>
+      <td>Doubles all ghost activity for 2 minutes (including throws, doors, roaming, abilities, etc.). The fuse box
+        will break permanently and the exit door will be locked for 2 minutes.</td>
+      <td>Chapel</td>
+    </tr>
+    <tr>
+      <td>Ghost</td>
+      <td>I wish to trap the ghost<br>I wish the ghost was trapped</td>
+      <td>Teleports the ghost to its favourite room and locks all of its doors for 1 minute. During this period, the
+        ghost cannot hunt, roam, or use abilities. This will also lock all doors of the player's current room for 1
+        minute. After this period, all doors will unlock and the ghost will start a <a
+          routerLink='/cursed-possessions/cursed-hunt'>cursed hunt</a>. There is a 25% chance for doors to unlock only
+        after the grace period.</td>
+      <td>Female Dorm Room</td>
+    </tr>
+  </table>
+</div>
+<button class="backbtn" (click)="goBack()">Go back</button>

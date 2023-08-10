@@ -1,0 +1,44 @@
+.container{
+  margin: 2rem;
+}
+
+a{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.wish-table{
+  border-collapse: collapse;
+}
+
+.wish-table th, .wish-table, td{
+  border: 1px solid;
+  padding: 8px;
+}
+
+.wish-table th:nth-child(1),
+.wish-table td:nth-child(1){
+  display: none;
+}
+ul{
+  list-style-type: disc;
+}
+
+li{
+  margin-left: 45px;
+}
+
+@media (max-width: 640px) {
+  .wish-table th:nth-child(4),
+  .wish-table td:nth-child(4){
+    display: none;
+  }
+
+
+}
+.backbtn{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  font-size: 18px;
+}

@@ -22,8 +22,9 @@ h2 {
   margin-left: 2%;
   font-weight: bold;
 
-  li {
+  h2{
     font-family: PhasmophobiaJournalFont;
+
   }
 }
 
@@ -58,6 +59,16 @@ li {
   }
 }
 
+@media only screen and (max-width: 1250px) {
+  #cursed-possessions-1 {
+    display: none
+  }
+
+  .text{
+    width: 75%;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   #cursed-possessions-1 {
     display: none
@@ -67,7 +78,15 @@ li {
     width: 70%;
   }
 }
+@media only screen and (max-width: 800px) {
+  #cursed-possessions-1 {
+    display: none
+  }
 
+  .text{
+    width: 65%;
+  }
+}
 
 @media only screen and (min-width: 661px) {
   .mobile-nav {
@@ -75,7 +94,7 @@ li {
   }
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 670px) {
   .nav {
     display: none;
   }

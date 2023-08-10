@@ -11,7 +11,8 @@ export class CursedPossesionsComponent {
   constructor(private router: Router, private meta: Meta) { }
 
   goTo(location: string): void {
-    this.router.navigate(['cursed-possessions/tarot-cards']);
+    const url : string = '/cursed-possessions/' + location;
+    this.router.navigate([url]);
   }
 
   ngOnInit(): void {

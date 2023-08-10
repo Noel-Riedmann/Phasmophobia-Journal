@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class TarotCardsComponent {
   constructor(private router: Router, private meta: Meta) {}
   goBack(){
-    this.router.navigate(['cursed-possessions']);
+    window.history.back();
   }
 
   ngOnInit(): void {

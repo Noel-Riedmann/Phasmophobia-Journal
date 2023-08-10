@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Music Box</h1>
+  <p>When picked up, the music box will open (this does not mean that it has been activated). The music box can then be
+    activated by using the primary use (default: right click on mouse) key. Doing so will end the setup phase early if
+    it is ongoing. The music box cannot be activated during a hunt, and can only be used once.</p>
+  <br>
+  <p>Once activated, the music box will make the ghost sing along while remaining invisible, broadcasting its current
+    location.</p>
+  <br>
+  <p>If the music box is within 5 metres of the ghost, it will trigger a ghost event where the ghost manifests and
+    begins to walk towards the box. The music box can be handheld or placed on the floor, the latter being the only safe
+    way to discard the box without triggering a cursed hunt before the ghost event. In all cases, the box will close
+    once it stops playing.</p>
+  <br>
+  <p>A cursed hunt will occur when:</p>
+  <br>
+  <ul>
+    <li>The ghost is within a short distance of the player holding the box.</li>
+    <li>The ghost walks during the box-triggered ghost event for more than 5 seconds.</li>
+    <li>The box is thrown while the tune is playing.</li>
+  </ul>
+  <br>
+  <p>A normal hunt will occur when:</p>
+  <br>
+  <ul>
+    <li>The player reaches or is already at 0% sanity.</li>
+    <li>The ghost initiates a hunt on its own.</li>
+  </ul>
+  <br>
+  <p>Being within 2.5 metres of an actively functioning music box drains the player's sanity at a rate of 2.5%/s,
+    totaling approximately 75% if the entire song is listened to. This applies to all players within the range,
+    regardless of who activated the music box.</p>
+</div>
+<button class="backbtn" (click)="goBack()">Go back</button>

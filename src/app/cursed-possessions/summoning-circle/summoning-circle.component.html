@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Summoning Circle</h1>
+  <p>The summoning circle can be used by lighting (default: F on keyboard) all five red candles with a lighter. Each
+    candle deducts 16% sanity for nearby players, leading to a total of 80% being deducted for all candles.</p>
+  <br>
+  <p>Summoning circle candles can extinguish after a while or be blown out by the ghost, in the same way as regular
+    candles. Additionally, if the player has less than 16% sanity when lighting a candle, the candle will extinguish
+    itself.</p>
+  <br>
+  <p>Once all five candles are lit, the ghost is summoned and fully materialized, except a Shade, which has a chance of
+    appearing as a transparent shadow. The summoned ghost stays motionless for about 5 seconds, unable to kill players.
+    The front door will lock immediately after lighting the
+    last candle. After this "grace period", it immediately initiates a
+    <a routerLink='/cursed-possessions/cursed-hunt'>cursed hunt</a> on the spot. Once the summoning circle is activated,
+    it cannot be used again.
+  </p>
+  <br>
+  <p>If the last candle is lit during a hunt, the hunt will be extended for at least 20 seconds.</p>
+</div>
+<button class="backbtn" (click)="goBack()">Go back</button>
