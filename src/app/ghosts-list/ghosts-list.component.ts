@@ -7,6 +7,7 @@ import { ChangeDetectorRef } from '@angular/core';
 import { HttpParams } from '@angular/common/http';
 import { map, startWith } from 'rxjs';
 import { FormControl } from '@angular/forms';
+import { Meta } from '@angular/platform-browser';
 
 
 
@@ -42,11 +43,14 @@ export class GhostsListComponent implements OnInit {
 
 
 
-  constructor(private changeDetectorRef: ChangeDetectorRef, private ghostService: GhostServiceService, private router: Router, private route: ActivatedRoute) {
+  constructor(private changeDetectorRef: ChangeDetectorRef, private ghostService: GhostServiceService, private router: Router, private route: ActivatedRoute, private meta: Meta) {
     this.dataSource = new MatTableDataSource<Ghost>([]);
   }
 
   ngOnInit(): void {
+    this.meta.addTag({ name: 'description', content: 'Phasmophobia Ghost Details: Spirit, Wraith, Phantom, Poltergeist, Banshee, Jinn, Mare, Revenant, Shade, Demon, Yurei, Oni, Yokai, Hantu, Goryo, Myling, Onryo, The Twins, Raiju, Obake, The Mimic, Moroi, Deogen, Thaye' });
+
+
     this.loadGhosts();
 
     this.myControl.valueChanges

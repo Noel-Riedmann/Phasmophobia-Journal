@@ -63,7 +63,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatTableModule,
     FormsModule,
     ReactiveFormsModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
