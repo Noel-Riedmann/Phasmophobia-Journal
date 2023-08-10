@@ -203,18 +203,23 @@ export class GhostsListComponent implements OnInit {
 
   updateUrl() {
     let queryParams = '';
+  
     if (this.selectedEvidenceNames.length > 0) {
       queryParams += 'evidence=' + this.selectedEvidenceNames.join('&evidence=') + '&';
     }
     if (this.selectedSpeedNames.length > 0) {
       queryParams += 'speed=' + this.selectedSpeedNames.join('&speed=') + '&';
     }
+  
     if (this.selectedSanityThresholdNames.length > 0) {
-      queryParams += 'sanityThreshold=' + this.selectedSanityThresholdNames.join('&sanityThreshold=') + '&';
+      const encodedSanityThresholds = this.selectedSanityThresholdNames.map(sanityThresholdName => encodeURIComponent(sanityThresholdName));
+      queryParams += 'sanityThreshold=' + encodedSanityThresholds.join('&sanityThreshold=') + '&';
     }
+  
     const url = this.router.url.split('?')[0] + '?' + queryParams;
     this.router.navigateByUrl(url);
   }
+  
 
 
 
