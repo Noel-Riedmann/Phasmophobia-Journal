@@ -1,7 +1,9 @@
 .filter{
   user-select: none;
 }
-
+.bold {
+  font-weight: 700
+}
 @media only screen and (min-width:1200px) {
   input::-webkit-search-cancel-button {
       width: 7%
@@ -86,9 +88,6 @@
   .evidence, .sanityThreshold, .speed {
       display: block
  }
-  .bold {
-      font-weight: 700
- }
   .evidence-checkbox, .evidencehead, .sanityThreshold-checkbox, .speed-checkbox {
       margin-left: 20px;
       margin-right: 20px;
@@ -145,9 +144,6 @@
  }
   .evidence, .sanityThreshold, .speed {
       display: block
- }
-  .bold {
-      font-weight: 700
  }
   .evidence-checkbox, .evidencehead, .sanityThreshold-checkbox, .speed-checkbox {
       margin-left: 20px;
