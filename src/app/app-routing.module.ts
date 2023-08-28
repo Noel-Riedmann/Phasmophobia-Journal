@@ -32,6 +32,7 @@ const routes: Routes = [
   { path: 'cursed-possessions/ouija-board', component: OuijaBoardComponent },
   { path: 'cursed-possessions/summoning-circle', component: SummoningCircleComponent },
   { path: 'cursed-possessions/voodoo-doll', component: VoodooDollComponent },
+  { path: '**', redirectTo: 'ghosts', pathMatch: 'full'},
 
 
 ];
