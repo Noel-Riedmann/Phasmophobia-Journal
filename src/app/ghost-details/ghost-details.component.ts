@@ -19,12 +19,14 @@ export class GhostDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.loadGhostDetails();
+    this.route.params.subscribe(params => {
+      const ghostName = params['name']; // Get the ghost name from the URL parameter
+      this.loadGhostDetails(ghostName);
+    });
   }
 
-  loadGhostDetails(): void {
-    const ghostId = Number(this.route.snapshot.paramMap.get('id'));
-    this.ghostService.getGhostDetails(ghostId).subscribe(
+  loadGhostDetails(ghostName: string): void {
+    this.ghostService.getGhostDetailsByName(ghostName).subscribe(
       (ghostDetails) => {
         this.ghostDetails = ghostDetails;
       },
@@ -33,6 +35,7 @@ export class GhostDetailsComponent implements OnInit {
       }
     );
   }
+
 
   goBack() {
     this.location.back();

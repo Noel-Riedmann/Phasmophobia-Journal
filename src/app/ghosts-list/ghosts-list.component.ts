@@ -48,7 +48,7 @@ export class GhostsListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.meta.addTag({ name: 'description', content: 'Phasmophobia Ghost Details: Spirit, Wraith, Phantom, Poltergeist, Banshee, Jinn, Mare, Revenant, Shade, Demon, Yurei, Oni, Yokai, Hantu, Goryo, Myling, Onryo, The Twins, Raiju, Obake, The Mimic, Moroi, Deogen, Thaye' });
+    this.meta.addTag({ name: 'description', content: 'Advanced filters and in-depth insights into every ghost type, giving you the upper hand in deciphering their haunting habits. Whether you are a rookie investigator or a seasoned pro, my journal caters to all levels of expertise. Phasmophobia Ghost Details: Spirit, Wraith, Phantom, Poltergeist, Banshee, Jinn, Mare, Revenant, Shade, Demon, Yurei, Oni, Yokai, Hantu, Goryo, Myling, Onryo, The Twins, Raiju, Obake, The Mimic, Moroi, Deogen, Thaye' });
 
 
     this.loadGhosts();
@@ -203,23 +203,23 @@ export class GhostsListComponent implements OnInit {
 
   updateUrl() {
     let queryParams = '';
-  
+
     if (this.selectedEvidenceNames.length > 0) {
       queryParams += 'evidence=' + this.selectedEvidenceNames.join('&evidence=') + '&';
     }
     if (this.selectedSpeedNames.length > 0) {
       queryParams += 'speed=' + this.selectedSpeedNames.join('&speed=') + '&';
     }
-  
+
     if (this.selectedSanityThresholdNames.length > 0) {
       const encodedSanityThresholds = this.selectedSanityThresholdNames.map(sanityThresholdName => encodeURIComponent(sanityThresholdName));
       queryParams += 'sanityThreshold=' + encodedSanityThresholds.join('&sanityThreshold=') + '&';
     }
-  
+
     const url = this.router.url.split('?')[0] + '?' + queryParams;
     this.router.navigateByUrl(url);
   }
-  
+
 
 
 

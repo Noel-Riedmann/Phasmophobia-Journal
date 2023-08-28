@@ -48,18 +48,18 @@ export interface SanityThresholdItem {
 }
 
 export interface ResponseWrapper<T> {
-  $values: T[]
+  $values: T[];
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class GhostServiceService {
-  private apiUrl = 'https://phasmoapi.azurewebsites.net/api/ghost';
+  private apiUrl = 'assets/api.json';
 
   constructor(private http: HttpClient) { }
 
-  getGhosts() {
+  getGhosts(): Observable<Ghost[]> {
     return this.http.get<ResponseWrapper<Ghost>>(this.apiUrl).pipe(
       map((response) => response.$values),
       catchError((error) => {
@@ -72,11 +72,28 @@ export class GhostServiceService {
   getGhostDetails(ghostId: number): Observable<Ghost | null> {
     const url = `${this.apiUrl}/${ghostId}`;
     return this.http.get<any>(url).pipe(
-      filter((response: any) => response !== null),
+      map((response: any) => response.$values[0] || null),
       catchError((error: any) => {
         console.error('Error fetching ghost details:', error);
         return of(null);
       })
     );
   }
+
+  getGhostDetailsByName(name: string): Observable<Ghost | null> {
+    return this.http.get<any>(this.apiUrl).pipe(
+      map((response: any) => {
+        const ghost = response.$values.find((g: Ghost) =>
+          g.name.toLowerCase() === name.toLowerCase()
+        );
+        return ghost || null;
+      }),
+      catchError((error: any) => {
+        console.error('Error fetching ghost details:', error);
+        return of(null);
+      })
+    );
+  }
+
+
 }

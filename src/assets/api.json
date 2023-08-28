@@ -1,0 +1,1801 @@
+{
+  "$id": "1",
+  "$values": [
+    {
+      "$id": "2",
+      "ghostId": 1,
+      "name": "Spirit",
+      "journalInfo": "JOURNAL_SPIRIT",
+      "strengths": "STRENGTHS_SPIRIT",
+      "weaknesses": "WEAKNESSES_SPIRIT",
+      "behaviour": "BEHAVIOUR_SPIRIT",
+      "test": "TEST_SPIRIT",
+      "evidence": {
+        "$id": "3",
+        "$values": [
+          {
+            "$id": "4",
+            "evidenceId": 1,
+            "name": "EMF-5",
+            "ghostId": 1,
+            "ghost": {
+              "$ref": "2"
+            }
+          },
+          {
+            "$id": "5",
+            "evidenceId": 2,
+            "name": "Spirit Box",
+            "ghostId": 1,
+            "ghost": {
+              "$ref": "2"
+            }
+          },
+          {
+            "$id": "6",
+            "evidenceId": 3,
+            "name": "Ghost Writing",
+            "ghostId": 1,
+            "ghost": {
+              "$ref": "2"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "7",
+        "$values": [
+          {
+            "$id": "8",
+            "speedId": 1,
+            "name": "Normal",
+            "ghostId": 1,
+            "ghost": {
+              "$ref": "2"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "9",
+        "$values": [
+          {
+            "$id": "10",
+            "sanityThresholdId": 1,
+            "name": "50%",
+            "ghostId": 1,
+            "ghost": {
+              "$ref": "2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "11",
+      "ghostId": 2,
+      "name": "Wraith",
+      "journalInfo": "JOURNAL_WRAITH",
+      "strengths": "STRENGTHS_WRAITH",
+      "weaknesses": "WEAKNESSES_WRAITH",
+      "behaviour": "BEHAVIOUR_WRAITH",
+      "test": "TEST_WRAITH",
+      "evidence": {
+        "$id": "12",
+        "$values": [
+          {
+            "$id": "13",
+            "evidenceId": 4,
+            "name": "EMF-5",
+            "ghostId": 2,
+            "ghost": {
+              "$ref": "11"
+            }
+          },
+          {
+            "$id": "14",
+            "evidenceId": 5,
+            "name": "Spirit Box",
+            "ghostId": 2,
+            "ghost": {
+              "$ref": "11"
+            }
+          },
+          {
+            "$id": "15",
+            "evidenceId": 6,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 2,
+            "ghost": {
+              "$ref": "11"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "16",
+        "$values": [
+          {
+            "$id": "17",
+            "speedId": 2,
+            "name": "Normal",
+            "ghostId": 2,
+            "ghost": {
+              "$ref": "11"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "18",
+        "$values": [
+          {
+            "$id": "19",
+            "sanityThresholdId": 2,
+            "name": "50%",
+            "ghostId": 2,
+            "ghost": {
+              "$ref": "11"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "20",
+      "ghostId": 3,
+      "name": "Phantom",
+      "journalInfo": "JOURNAL_PHANTOM",
+      "strengths": "STRENGTHS_PHANTOM",
+      "weaknesses": "WEAKNESSES_PHANTOM",
+      "behaviour": "BEHAVIOUR_PHANTOM",
+      "test": "TEST_PHANTOM",
+      "evidence": {
+        "$id": "21",
+        "$values": [
+          {
+            "$id": "22",
+            "evidenceId": 7,
+            "name": "Fingerprints",
+            "ghostId": 3,
+            "ghost": {
+              "$ref": "20"
+            }
+          },
+          {
+            "$id": "23",
+            "evidenceId": 8,
+            "name": "Spirit Box",
+            "ghostId": 3,
+            "ghost": {
+              "$ref": "20"
+            }
+          },
+          {
+            "$id": "24",
+            "evidenceId": 9,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 3,
+            "ghost": {
+              "$ref": "20"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "25",
+        "$values": [
+          {
+            "$id": "26",
+            "speedId": 3,
+            "name": "Normal",
+            "ghostId": 3,
+            "ghost": {
+              "$ref": "20"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "27",
+        "$values": [
+          {
+            "$id": "28",
+            "sanityThresholdId": 3,
+            "name": "50%",
+            "ghostId": 3,
+            "ghost": {
+              "$ref": "20"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "29",
+      "ghostId": 4,
+      "name": "Poltergeist",
+      "journalInfo": "JOURNAL_POLTERGEIST",
+      "strengths": "STRENGTHS_POLTERGEIST",
+      "weaknesses": "WEAKNESSES_POLTERGEIST",
+      "behaviour": "BEHAVIOUR_POLTERGEIST",
+      "test": "TEST_POLTERGEIST",
+      "evidence": {
+        "$id": "30",
+        "$values": [
+          {
+            "$id": "31",
+            "evidenceId": 10,
+            "name": "Fingerprints",
+            "ghostId": 4,
+            "ghost": {
+              "$ref": "29"
+            }
+          },
+          {
+            "$id": "32",
+            "evidenceId": 11,
+            "name": "Ghost Writing",
+            "ghostId": 4,
+            "ghost": {
+              "$ref": "29"
+            }
+          },
+          {
+            "$id": "33",
+            "evidenceId": 12,
+            "name": "Spirit Box",
+            "ghostId": 4,
+            "ghost": {
+              "$ref": "29"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "34",
+        "$values": [
+          {
+            "$id": "35",
+            "speedId": 4,
+            "name": "Normal",
+            "ghostId": 4,
+            "ghost": {
+              "$ref": "29"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "36",
+        "$values": [
+          {
+            "$id": "37",
+            "sanityThresholdId": 4,
+            "name": "50%",
+            "ghostId": 4,
+            "ghost": {
+              "$ref": "29"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "38",
+      "ghostId": 5,
+      "name": "Banshee",
+      "journalInfo": "JOURNAL_BANSHEE",
+      "strengths": "STRENGTHS_BANSHEE",
+      "weaknesses": "WEAKNESSES_BANSHEE",
+      "behaviour": "BEHAVIOUR_BANSHEE",
+      "test": "TEST_BANSHEE",
+      "evidence": {
+        "$id": "39",
+        "$values": [
+          {
+            "$id": "40",
+            "evidenceId": 13,
+            "name": "Fingerprints",
+            "ghostId": 5,
+            "ghost": {
+              "$ref": "38"
+            }
+          },
+          {
+            "$id": "41",
+            "evidenceId": 14,
+            "name": "Ghost Orb",
+            "ghostId": 5,
+            "ghost": {
+              "$ref": "38"
+            }
+          },
+          {
+            "$id": "42",
+            "evidenceId": 15,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 5,
+            "ghost": {
+              "$ref": "38"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "43",
+        "$values": [
+          {
+            "$id": "44",
+            "speedId": 5,
+            "name": "Normal",
+            "ghostId": 5,
+            "ghost": {
+              "$ref": "38"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "45",
+        "$values": [
+          {
+            "$id": "46",
+            "sanityThresholdId": 5,
+            "name": "50%",
+            "ghostId": 5,
+            "ghost": {
+              "$ref": "38"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "47",
+      "ghostId": 6,
+      "name": "Jinn",
+      "journalInfo": "JOURNAL_JINN",
+      "strengths": "STRENGTHS_JINN",
+      "weaknesses": "WEAKNESSES_JINN",
+      "behaviour": "BEHAVIOUR_JINN",
+      "test": "TEST_JINN",
+      "evidence": {
+        "$id": "48",
+        "$values": [
+          {
+            "$id": "49",
+            "evidenceId": 16,
+            "name": "EMF-5",
+            "ghostId": 6,
+            "ghost": {
+              "$ref": "47"
+            }
+          },
+          {
+            "$id": "50",
+            "evidenceId": 17,
+            "name": "Fingerprints",
+            "ghostId": 6,
+            "ghost": {
+              "$ref": "47"
+            }
+          },
+          {
+            "$id": "51",
+            "evidenceId": 18,
+            "name": "Freezing Temperatures",
+            "ghostId": 6,
+            "ghost": {
+              "$ref": "47"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "52",
+        "$values": [
+          {
+            "$id": "53",
+            "speedId": 6,
+            "name": "Normal",
+            "ghostId": 6,
+            "ghost": {
+              "$ref": "47"
+            }
+          },
+          {
+            "$id": "54",
+            "speedId": 7,
+            "name": "Fast",
+            "ghostId": 6,
+            "ghost": {
+              "$ref": "47"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "55",
+        "$values": [
+          {
+            "$id": "56",
+            "sanityThresholdId": 6,
+            "name": "50%",
+            "ghostId": 6,
+            "ghost": {
+              "$ref": "47"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "57",
+      "ghostId": 7,
+      "name": "Mare",
+      "journalInfo": "JOURNAL_MARE",
+      "strengths": "STRENGTHS_MARE",
+      "weaknesses": "WEAKNESSES_MARE",
+      "behaviour": "BEHAVIOUR_MARE",
+      "test": "TEST_MARE",
+      "evidence": {
+        "$id": "58",
+        "$values": [
+          {
+            "$id": "59",
+            "evidenceId": 19,
+            "name": "Spirit Box",
+            "ghostId": 7,
+            "ghost": {
+              "$ref": "57"
+            }
+          },
+          {
+            "$id": "60",
+            "evidenceId": 20,
+            "name": "Ghost Orb",
+            "ghostId": 7,
+            "ghost": {
+              "$ref": "57"
+            }
+          },
+          {
+            "$id": "61",
+            "evidenceId": 21,
+            "name": "Ghost Writing",
+            "ghostId": 7,
+            "ghost": {
+              "$ref": "57"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "62",
+        "$values": [
+          {
+            "$id": "63",
+            "speedId": 8,
+            "name": "Normal",
+            "ghostId": 7,
+            "ghost": {
+              "$ref": "57"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "64",
+        "$values": [
+          {
+            "$id": "65",
+            "sanityThresholdId": 7,
+            "name": "60%",
+            "ghostId": 7,
+            "ghost": {
+              "$ref": "57"
+            }
+          },
+          {
+            "$id": "66",
+            "sanityThresholdId": 8,
+            "name": "40%",
+            "ghostId": 7,
+            "ghost": {
+              "$ref": "57"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "67",
+      "ghostId": 8,
+      "name": "Revenant",
+      "journalInfo": "JOURNAL_REVENANT",
+      "strengths": "STRENGTHS_REVENANT",
+      "weaknesses": "WEAKNESSES_REVENANT",
+      "behaviour": "BEHAVIOUR_REVENANT",
+      "test": "TEST_REVENANT",
+      "evidence": {
+        "$id": "68",
+        "$values": [
+          {
+            "$id": "69",
+            "evidenceId": 22,
+            "name": "Freezing Temperatures",
+            "ghostId": 8,
+            "ghost": {
+              "$ref": "67"
+            }
+          },
+          {
+            "$id": "70",
+            "evidenceId": 23,
+            "name": "Ghost Orb",
+            "ghostId": 8,
+            "ghost": {
+              "$ref": "67"
+            }
+          },
+          {
+            "$id": "71",
+            "evidenceId": 24,
+            "name": "Ghost Writing",
+            "ghostId": 8,
+            "ghost": {
+              "$ref": "67"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "72",
+        "$values": [
+          {
+            "$id": "73",
+            "speedId": 9,
+            "name": "Slow",
+            "ghostId": 8,
+            "ghost": {
+              "$ref": "67"
+            }
+          },
+          {
+            "$id": "74",
+            "speedId": 10,
+            "name": "Fast",
+            "ghostId": 8,
+            "ghost": {
+              "$ref": "67"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "75",
+        "$values": [
+          {
+            "$id": "76",
+            "sanityThresholdId": 9,
+            "name": "50%",
+            "ghostId": 8,
+            "ghost": {
+              "$ref": "67"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "77",
+      "ghostId": 9,
+      "name": "Shade",
+      "journalInfo": "JOURNAL_SHADE",
+      "strengths": "STRENGTHS_SHADE",
+      "weaknesses": "WEAKNESSES_SHADE",
+      "behaviour": "BEHAVIOUR_SHADE",
+      "test": "TEST_SHADE",
+      "evidence": {
+        "$id": "78",
+        "$values": [
+          {
+            "$id": "79",
+            "evidenceId": 25,
+            "name": "Freezing Temperatures",
+            "ghostId": 9,
+            "ghost": {
+              "$ref": "77"
+            }
+          },
+          {
+            "$id": "80",
+            "evidenceId": 26,
+            "name": "EMF-5",
+            "ghostId": 9,
+            "ghost": {
+              "$ref": "77"
+            }
+          },
+          {
+            "$id": "81",
+            "evidenceId": 27,
+            "name": "Ghost Writing",
+            "ghostId": 9,
+            "ghost": {
+              "$ref": "77"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "82",
+        "$values": [
+          {
+            "$id": "83",
+            "speedId": 11,
+            "name": "Normal",
+            "ghostId": 9,
+            "ghost": {
+              "$ref": "77"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "84",
+        "$values": [
+          {
+            "$id": "85",
+            "sanityThresholdId": 10,
+            "name": "35%",
+            "ghostId": 9,
+            "ghost": {
+              "$ref": "77"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "86",
+      "ghostId": 10,
+      "name": "Demon",
+      "journalInfo": "JOURNAL_DEMON",
+      "strengths": "STRENGTHS_DEMON",
+      "weaknesses": "WEAKNESSES_DEMON",
+      "behaviour": "BEHAVIOUR_DEMON",
+      "test": "TEST_DEMON",
+      "evidence": {
+        "$id": "87",
+        "$values": [
+          {
+            "$id": "88",
+            "evidenceId": 28,
+            "name": "Freezing Temperatures",
+            "ghostId": 10,
+            "ghost": {
+              "$ref": "86"
+            }
+          },
+          {
+            "$id": "89",
+            "evidenceId": 29,
+            "name": "Fingerprints",
+            "ghostId": 10,
+            "ghost": {
+              "$ref": "86"
+            }
+          },
+          {
+            "$id": "90",
+            "evidenceId": 30,
+            "name": "Ghost Writing",
+            "ghostId": 10,
+            "ghost": {
+              "$ref": "86"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "91",
+        "$values": [
+          {
+            "$id": "92",
+            "speedId": 12,
+            "name": "Normal",
+            "ghostId": 10,
+            "ghost": {
+              "$ref": "86"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "93",
+        "$values": [
+          {
+            "$id": "94",
+            "sanityThresholdId": 11,
+            "name": "70%",
+            "ghostId": 10,
+            "ghost": {
+              "$ref": "86"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "95",
+      "ghostId": 11,
+      "name": "Yurei",
+      "journalInfo": "JOURNAL_YUREI",
+      "strengths": "STRENGTHS_YUREI",
+      "weaknesses": "WEAKNESSES_YUREI",
+      "behaviour": "BEHAVIOUR_YUREI",
+      "test": "TEST_YUREI",
+      "evidence": {
+        "$id": "96",
+        "$values": [
+          {
+            "$id": "97",
+            "evidenceId": 31,
+            "name": "Freezing Temperatures",
+            "ghostId": 11,
+            "ghost": {
+              "$ref": "95"
+            }
+          },
+          {
+            "$id": "98",
+            "evidenceId": 32,
+            "name": "Ghost Orb",
+            "ghostId": 11,
+            "ghost": {
+              "$ref": "95"
+            }
+          },
+          {
+            "$id": "99",
+            "evidenceId": 33,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 11,
+            "ghost": {
+              "$ref": "95"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "100",
+        "$values": [
+          {
+            "$id": "101",
+            "speedId": 13,
+            "name": "Normal",
+            "ghostId": 11,
+            "ghost": {
+              "$ref": "95"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "102",
+        "$values": [
+          {
+            "$id": "103",
+            "sanityThresholdId": 12,
+            "name": "50%",
+            "ghostId": 11,
+            "ghost": {
+              "$ref": "95"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "104",
+      "ghostId": 12,
+      "name": "Oni",
+      "journalInfo": "JOURNAL_ONI",
+      "strengths": "STRENGTHS_ONI",
+      "weaknesses": "WEAKNESSES_ONI",
+      "behaviour": "BEHAVIOUR_ONI",
+      "test": "TEST_ONI",
+      "evidence": {
+        "$id": "105",
+        "$values": [
+          {
+            "$id": "106",
+            "evidenceId": 34,
+            "name": "Freezing Temperatures",
+            "ghostId": 12,
+            "ghost": {
+              "$ref": "104"
+            }
+          },
+          {
+            "$id": "107",
+            "evidenceId": 35,
+            "name": "EMF-5",
+            "ghostId": 12,
+            "ghost": {
+              "$ref": "104"
+            }
+          },
+          {
+            "$id": "108",
+            "evidenceId": 36,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 12,
+            "ghost": {
+              "$ref": "104"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "109",
+        "$values": [
+          {
+            "$id": "110",
+            "speedId": 14,
+            "name": "Normal",
+            "ghostId": 12,
+            "ghost": {
+              "$ref": "104"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "111",
+        "$values": [
+          {
+            "$id": "112",
+            "sanityThresholdId": 13,
+            "name": "50%",
+            "ghostId": 12,
+            "ghost": {
+              "$ref": "104"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "113",
+      "ghostId": 13,
+      "name": "Yokai",
+      "journalInfo": "JOURNAL_YOKAI",
+      "strengths": "STRENGTHS_YOKAI",
+      "weaknesses": "WEAKNESSES_YOKAI",
+      "behaviour": "BEHAVIOUR_YOKAI",
+      "test": "TEST_YOKAI",
+      "evidence": {
+        "$id": "114",
+        "$values": [
+          {
+            "$id": "115",
+            "evidenceId": 37,
+            "name": "Spirit Box",
+            "ghostId": 13,
+            "ghost": {
+              "$ref": "113"
+            }
+          },
+          {
+            "$id": "116",
+            "evidenceId": 38,
+            "name": "Ghost Orb",
+            "ghostId": 13,
+            "ghost": {
+              "$ref": "113"
+            }
+          },
+          {
+            "$id": "117",
+            "evidenceId": 39,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 13,
+            "ghost": {
+              "$ref": "113"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "118",
+        "$values": [
+          {
+            "$id": "119",
+            "speedId": 15,
+            "name": "Normal",
+            "ghostId": 13,
+            "ghost": {
+              "$ref": "113"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "120",
+        "$values": [
+          {
+            "$id": "121",
+            "sanityThresholdId": 14,
+            "name": "80%",
+            "ghostId": 13,
+            "ghost": {
+              "$ref": "113"
+            }
+          },
+          {
+            "$id": "122",
+            "sanityThresholdId": 15,
+            "name": "50%",
+            "ghostId": 13,
+            "ghost": {
+              "$ref": "113"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "123",
+      "ghostId": 14,
+      "name": "Hantu",
+      "journalInfo": "JOURNAL_HANTU",
+      "strengths": "STRENGTHS_HANTU",
+      "weaknesses": "WEAKNESSES_HANTU",
+      "behaviour": "BEHAVIOUR_HANTU",
+      "test": "TEST_HANTU",
+      "evidence": {
+        "$id": "124",
+        "$values": [
+          {
+            "$id": "125",
+            "evidenceId": 40,
+            "name": "Freezing Temperatures",
+            "ghostId": 14,
+            "ghost": {
+              "$ref": "123"
+            }
+          },
+          {
+            "$id": "126",
+            "evidenceId": 41,
+            "name": "Ghost Orb",
+            "ghostId": 14,
+            "ghost": {
+              "$ref": "123"
+            }
+          },
+          {
+            "$id": "127",
+            "evidenceId": 42,
+            "name": "Fingerprints",
+            "ghostId": 14,
+            "ghost": {
+              "$ref": "123"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "128",
+        "$values": [
+          {
+            "$id": "129",
+            "speedId": 16,
+            "name": "Slow",
+            "ghostId": 14,
+            "ghost": {
+              "$ref": "123"
+            }
+          },
+          {
+            "$id": "130",
+            "speedId": 17,
+            "name": "Fast",
+            "ghostId": 14,
+            "ghost": {
+              "$ref": "123"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "131",
+        "$values": [
+          {
+            "$id": "132",
+            "sanityThresholdId": 16,
+            "name": "50%",
+            "ghostId": 14,
+            "ghost": {
+              "$ref": "123"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "133",
+      "ghostId": 15,
+      "name": "Goryo",
+      "journalInfo": "JOURNAL_GORYO",
+      "strengths": "STRENGTHS_GORYO",
+      "weaknesses": "WEAKNESSES_GORYO",
+      "behaviour": "BEHAVIOUR_GORYO",
+      "test": "TEST_GORYO",
+      "evidence": {
+        "$id": "134",
+        "$values": [
+          {
+            "$id": "135",
+            "evidenceId": 43,
+            "name": "EMF-5",
+            "ghostId": 15,
+            "ghost": {
+              "$ref": "133"
+            }
+          },
+          {
+            "$id": "136",
+            "evidenceId": 44,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 15,
+            "ghost": {
+              "$ref": "133"
+            }
+          },
+          {
+            "$id": "137",
+            "evidenceId": 45,
+            "name": "Fingerprints",
+            "ghostId": 15,
+            "ghost": {
+              "$ref": "133"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "138",
+        "$values": [
+          {
+            "$id": "139",
+            "speedId": 18,
+            "name": "Normal",
+            "ghostId": 15,
+            "ghost": {
+              "$ref": "133"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "140",
+        "$values": [
+          {
+            "$id": "141",
+            "sanityThresholdId": 17,
+            "name": "50%",
+            "ghostId": 15,
+            "ghost": {
+              "$ref": "133"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "142",
+      "ghostId": 16,
+      "name": "Myling",
+      "journalInfo": "JOURNAL_MYLING",
+      "strengths": "STRENGTHS_MYLING",
+      "weaknesses": "WEAKNESSES_MYLING",
+      "behaviour": "BEHAVIOUR_MYLING",
+      "test": "TEST_MYLING",
+      "evidence": {
+        "$id": "143",
+        "$values": [
+          {
+            "$id": "144",
+            "evidenceId": 46,
+            "name": "EMF-5",
+            "ghostId": 16,
+            "ghost": {
+              "$ref": "142"
+            }
+          },
+          {
+            "$id": "145",
+            "evidenceId": 47,
+            "name": "Ghost Writing",
+            "ghostId": 16,
+            "ghost": {
+              "$ref": "142"
+            }
+          },
+          {
+            "$id": "146",
+            "evidenceId": 48,
+            "name": "Fingerprints",
+            "ghostId": 16,
+            "ghost": {
+              "$ref": "142"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "147",
+        "$values": [
+          {
+            "$id": "148",
+            "speedId": 19,
+            "name": "Normal",
+            "ghostId": 16,
+            "ghost": {
+              "$ref": "142"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "149",
+        "$values": [
+          {
+            "$id": "150",
+            "sanityThresholdId": 18,
+            "name": "50%",
+            "ghostId": 16,
+            "ghost": {
+              "$ref": "142"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "151",
+      "ghostId": 17,
+      "name": "Onryo",
+      "journalInfo": "JOURNAL_ONRYO",
+      "strengths": "STRENGTHS_ONRYO",
+      "weaknesses": "WEAKNESSES_ONRYO",
+      "behaviour": "BEHAVIOUR_ONRYO",
+      "test": "TEST_ONRYO",
+      "evidence": {
+        "$id": "152",
+        "$values": [
+          {
+            "$id": "153",
+            "evidenceId": 49,
+            "name": "Spirit Box",
+            "ghostId": 17,
+            "ghost": {
+              "$ref": "151"
+            }
+          },
+          {
+            "$id": "154",
+            "evidenceId": 50,
+            "name": "Freezing Temperatures",
+            "ghostId": 17,
+            "ghost": {
+              "$ref": "151"
+            }
+          },
+          {
+            "$id": "155",
+            "evidenceId": 51,
+            "name": "Ghost Orb",
+            "ghostId": 17,
+            "ghost": {
+              "$ref": "151"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "156",
+        "$values": [
+          {
+            "$id": "157",
+            "speedId": 20,
+            "name": "Normal",
+            "ghostId": 17,
+            "ghost": {
+              "$ref": "151"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "158",
+        "$values": [
+          {
+            "$id": "159",
+            "sanityThresholdId": 19,
+            "name": "60%",
+            "ghostId": 17,
+            "ghost": {
+              "$ref": "151"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "160",
+      "ghostId": 18,
+      "name": "The Twins",
+      "journalInfo": "JOURNAL_THETWINS",
+      "strengths": "STRENGTHS_THETWINS",
+      "weaknesses": "WEAKNESSES_THETWINS",
+      "behaviour": "BEHAVIOUR_THETWINS",
+      "test": "TEST_THETWINS",
+      "evidence": {
+        "$id": "161",
+        "$values": [
+          {
+            "$id": "162",
+            "evidenceId": 52,
+            "name": "Spirit Box",
+            "ghostId": 18,
+            "ghost": {
+              "$ref": "160"
+            }
+          },
+          {
+            "$id": "163",
+            "evidenceId": 53,
+            "name": "Freezing Temperatures",
+            "ghostId": 18,
+            "ghost": {
+              "$ref": "160"
+            }
+          },
+          {
+            "$id": "164",
+            "evidenceId": 54,
+            "name": "EMF-5",
+            "ghostId": 18,
+            "ghost": {
+              "$ref": "160"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "165",
+        "$values": [
+          {
+            "$id": "166",
+            "speedId": 21,
+            "name": "Slow",
+            "ghostId": 18,
+            "ghost": {
+              "$ref": "160"
+            }
+          },
+          {
+            "$id": "167",
+            "speedId": 22,
+            "name": "Fast",
+            "ghostId": 18,
+            "ghost": {
+              "$ref": "160"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "168",
+        "$values": [
+          {
+            "$id": "169",
+            "sanityThresholdId": 20,
+            "name": "50%",
+            "ghostId": 18,
+            "ghost": {
+              "$ref": "160"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "170",
+      "ghostId": 19,
+      "name": "Raiju",
+      "journalInfo": "JOURNAL_RAIJU",
+      "strengths": "STRENGTHS_RAIJU",
+      "weaknesses": "WEAKNESSES_RAIJU",
+      "behaviour": "BEHAVIOUR_RAIJU",
+      "test": "TEST_RAIJU",
+      "evidence": {
+        "$id": "171",
+        "$values": [
+          {
+            "$id": "172",
+            "evidenceId": 55,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 19,
+            "ghost": {
+              "$ref": "170"
+            }
+          },
+          {
+            "$id": "173",
+            "evidenceId": 56,
+            "name": "Ghost Orb",
+            "ghostId": 19,
+            "ghost": {
+              "$ref": "170"
+            }
+          },
+          {
+            "$id": "174",
+            "evidenceId": 57,
+            "name": "EMF-5",
+            "ghostId": 19,
+            "ghost": {
+              "$ref": "170"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "175",
+        "$values": [
+          {
+            "$id": "176",
+            "speedId": 23,
+            "name": "Normal",
+            "ghostId": 19,
+            "ghost": {
+              "$ref": "170"
+            }
+          },
+          {
+            "$id": "177",
+            "speedId": 24,
+            "name": "Fast",
+            "ghostId": 19,
+            "ghost": {
+              "$ref": "170"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "178",
+        "$values": [
+          {
+            "$id": "179",
+            "sanityThresholdId": 21,
+            "name": "50%",
+            "ghostId": 19,
+            "ghost": {
+              "$ref": "170"
+            }
+          },
+          {
+            "$id": "180",
+            "sanityThresholdId": 22,
+            "name": "65%",
+            "ghostId": 19,
+            "ghost": {
+              "$ref": "170"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "181",
+      "ghostId": 20,
+      "name": "Obake",
+      "journalInfo": "JOURNAL_OBAKE",
+      "strengths": "STRENGTHS_OBAKE",
+      "weaknesses": "WEAKNESSES_OBAKE",
+      "behaviour": "BEHAVIOUR_OBAKE",
+      "test": "TEST_OBAKE",
+      "evidence": {
+        "$id": "182",
+        "$values": [
+          {
+            "$id": "183",
+            "evidenceId": 58,
+            "name": "Fingerprints",
+            "ghostId": 20,
+            "ghost": {
+              "$ref": "181"
+            }
+          },
+          {
+            "$id": "184",
+            "evidenceId": 59,
+            "name": "Ghost Orb",
+            "ghostId": 20,
+            "ghost": {
+              "$ref": "181"
+            }
+          },
+          {
+            "$id": "185",
+            "evidenceId": 60,
+            "name": "EMF-5",
+            "ghostId": 20,
+            "ghost": {
+              "$ref": "181"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "186",
+        "$values": [
+          {
+            "$id": "187",
+            "speedId": 25,
+            "name": "Normal",
+            "ghostId": 20,
+            "ghost": {
+              "$ref": "181"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "188",
+        "$values": [
+          {
+            "$id": "189",
+            "sanityThresholdId": 23,
+            "name": "50%",
+            "ghostId": 20,
+            "ghost": {
+              "$ref": "181"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "190",
+      "ghostId": 21,
+      "name": "The Mimic",
+      "journalInfo": "JOURNAL_THEMIMIC",
+      "strengths": "STRENGTHS_THEMIMIC",
+      "weaknesses": "WEAKNESSES_THEMIMIC",
+      "behaviour": "BEHAVIOUR_THEMIMIC",
+      "test": "TEST_THEMIMIC",
+      "evidence": {
+        "$id": "191",
+        "$values": [
+          {
+            "$id": "192",
+            "evidenceId": 61,
+            "name": "Spirit Box",
+            "ghostId": 21,
+            "ghost": {
+              "$ref": "190"
+            }
+          },
+          {
+            "$id": "193",
+            "evidenceId": 62,
+            "name": "Fingerprints",
+            "ghostId": 21,
+            "ghost": {
+              "$ref": "190"
+            }
+          },
+          {
+            "$id": "194",
+            "evidenceId": 63,
+            "name": "Freezing Temperatures",
+            "ghostId": 21,
+            "ghost": {
+              "$ref": "190"
+            }
+          },
+          {
+            "$id": "195",
+            "evidenceId": 64,
+            "name": "Ghost Orb",
+            "ghostId": 21,
+            "ghost": {
+              "$ref": "190"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "196",
+        "$values": [
+          {
+            "$id": "197",
+            "speedId": 26,
+            "name": "Slow",
+            "ghostId": 21,
+            "ghost": {
+              "$ref": "190"
+            }
+          },
+          {
+            "$id": "198",
+            "speedId": 27,
+            "name": "Normal",
+            "ghostId": 21,
+            "ghost": {
+              "$ref": "190"
+            }
+          },
+          {
+            "$id": "199",
+            "speedId": 28,
+            "name": "Fast",
+            "ghostId": 21,
+            "ghost": {
+              "$ref": "190"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "200",
+        "$values": []
+      }
+    },
+    {
+      "$id": "201",
+      "ghostId": 22,
+      "name": "Moroi",
+      "journalInfo": "JOURNAL_MOROI",
+      "strengths": "STRENGTHS_MOROI",
+      "weaknesses": "WEAKNESSES_MOROI",
+      "behaviour": "BEHAVIOUR_MOROI",
+      "test": "TEST_MOROI",
+      "evidence": {
+        "$id": "202",
+        "$values": [
+          {
+            "$id": "203",
+            "evidenceId": 65,
+            "name": "Spirit Box",
+            "ghostId": 22,
+            "ghost": {
+              "$ref": "201"
+            }
+          },
+          {
+            "$id": "204",
+            "evidenceId": 66,
+            "name": "Freezing Temperatures",
+            "ghostId": 22,
+            "ghost": {
+              "$ref": "201"
+            }
+          },
+          {
+            "$id": "205",
+            "evidenceId": 67,
+            "name": "Ghost Writing",
+            "ghostId": 22,
+            "ghost": {
+              "$ref": "201"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "206",
+        "$values": [
+          {
+            "$id": "207",
+            "speedId": 29,
+            "name": "Fast",
+            "ghostId": 22,
+            "ghost": {
+              "$ref": "201"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "208",
+        "$values": [
+          {
+            "$id": "209",
+            "sanityThresholdId": 24,
+            "name": "50%",
+            "ghostId": 22,
+            "ghost": {
+              "$ref": "201"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "210",
+      "ghostId": 23,
+      "name": "Deogen",
+      "journalInfo": "JOURNAL_DEOGEN",
+      "strengths": "STRENGTHS_DEOGEN",
+      "weaknesses": "WEAKNESSES_DEOGEN",
+      "behaviour": "BEHAVIOUR_DEOGEN",
+      "test": "TEST_DEOGEN",
+      "evidence": {
+        "$id": "211",
+        "$values": [
+          {
+            "$id": "212",
+            "evidenceId": 68,
+            "name": "Spirit Box",
+            "ghostId": 23,
+            "ghost": {
+              "$ref": "210"
+            }
+          },
+          {
+            "$id": "213",
+            "evidenceId": 69,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 23,
+            "ghost": {
+              "$ref": "210"
+            }
+          },
+          {
+            "$id": "214",
+            "evidenceId": 70,
+            "name": "Ghost Writing",
+            "ghostId": 23,
+            "ghost": {
+              "$ref": "210"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "215",
+        "$values": [
+          {
+            "$id": "216",
+            "speedId": 30,
+            "name": "Fast",
+            "ghostId": 23,
+            "ghost": {
+              "$ref": "210"
+            }
+          },
+          {
+            "$id": "217",
+            "speedId": 31,
+            "name": "Slow",
+            "ghostId": 23,
+            "ghost": {
+              "$ref": "210"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "218",
+        "$values": [
+          {
+            "$id": "219",
+            "sanityThresholdId": 25,
+            "name": "40%",
+            "ghostId": 23,
+            "ghost": {
+              "$ref": "210"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$id": "220",
+      "ghostId": 24,
+      "name": "Thaye",
+      "journalInfo": "JOURNAL_THAYE",
+      "strengths": "STRENGTHS_THAYE",
+      "weaknesses": "WEAKNESSES_THAYE",
+      "behaviour": "BEHAVIOUR_THAYE",
+      "test": "TEST_THAYE",
+      "evidence": {
+        "$id": "221",
+        "$values": [
+          {
+            "$id": "222",
+            "evidenceId": 71,
+            "name": "Ghost Orb",
+            "ghostId": 24,
+            "ghost": {
+              "$ref": "220"
+            }
+          },
+          {
+            "$id": "223",
+            "evidenceId": 72,
+            "name": "D.O.T.S. Projector",
+            "ghostId": 24,
+            "ghost": {
+              "$ref": "220"
+            }
+          },
+          {
+            "$id": "224",
+            "evidenceId": 73,
+            "name": "Ghost Writing",
+            "ghostId": 24,
+            "ghost": {
+              "$ref": "220"
+            }
+          }
+        ]
+      },
+      "speed": {
+        "$id": "225",
+        "$values": [
+          {
+            "$id": "226",
+            "speedId": 32,
+            "name": "Fast",
+            "ghostId": 24,
+            "ghost": {
+              "$ref": "220"
+            }
+          },
+          {
+            "$id": "227",
+            "speedId": 33,
+            "name": "Slow",
+            "ghostId": 24,
+            "ghost": {
+              "$ref": "220"
+            }
+          }
+        ]
+      },
+      "sanityThreshold": {
+        "$id": "228",
+        "$values": [
+          {
+            "$id": "229",
+            "sanityThresholdId": 26,
+            "name": "75%",
+            "ghostId": 24,
+            "ghost": {
+              "$ref": "220"
+            }
+          },
+          {
+            "$id": "230",
+            "sanityThresholdId": 27,
+            "name": "15%",
+            "ghostId": 24,
+            "ghost": {
+              "$ref": "220"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
