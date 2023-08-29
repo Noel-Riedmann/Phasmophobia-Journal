@@ -14,13 +14,14 @@ import { MusicBoxComponent } from './cursed-possessions/music-box/music-box.comp
 import { OuijaBoardComponent } from './cursed-possessions/ouija-board/ouija-board.component';
 import { SummoningCircleComponent } from './cursed-possessions/summoning-circle/summoning-circle.component';
 import { VoodooDollComponent } from './cursed-possessions/voodoo-doll/voodoo-doll.component';
+import { IdentificationToolsComponent } from './identification-tools/identification-tools.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'home', redirectTo: '', pathMatch: 'full' },
   { path: 'ghosts', component: GhostsListComponent },
   { path: 'ghosts/:name', component: GhostDetailsComponent },
-  { path: 'ghosts/details/:name', redirectTo: 'ghosts/:name', pathMatch: 'full'  },
+  { path: 'ghosts/details/:name', redirectTo: 'ghosts/:name', pathMatch: 'full' },
   { path: 'navigation/menu', component: NavigationMenuComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'cursed-possessions', component: CursedPossesionsComponent },
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'cursed-possessions/ouija-board', component: OuijaBoardComponent },
   { path: 'cursed-possessions/summoning-circle', component: SummoningCircleComponent },
   { path: 'cursed-possessions/voodoo-doll', component: VoodooDollComponent },
-  { path: '**', redirectTo: 'ghosts', pathMatch: 'full'},
+  { path: 'tools', component: IdentificationToolsComponent },
+  { path: '**', redirectTo: 'ghosts', pathMatch: 'full' },
 
 
 ];

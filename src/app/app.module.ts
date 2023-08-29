@@ -35,6 +35,9 @@ import { MusicBoxComponent } from './cursed-possessions/music-box/music-box.comp
 import { OuijaBoardComponent } from './cursed-possessions/ouija-board/ouija-board.component';
 import { SummoningCircleComponent } from './cursed-possessions/summoning-circle/summoning-circle.component';
 import { VoodooDollComponent } from './cursed-possessions/voodoo-doll/voodoo-doll.component';
+import { IdentificationToolsComponent } from './identification-tools/identification-tools.component';
+import { TimerComponent } from './timer/timer.component';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 
@@ -44,7 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent, HomePageComponent, AboutPageComponent, ActiveLinkDirective, HauntedMirrorComponent, MonkeyPawComponent, CursedHuntComponent, MusicBoxComponent, OuijaBoardComponent, SummoningCircleComponent, VoodooDollComponent],
+  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent, HomePageComponent, AboutPageComponent, ActiveLinkDirective, HauntedMirrorComponent, MonkeyPawComponent, CursedHuntComponent, MusicBoxComponent, OuijaBoardComponent, SummoningCircleComponent, VoodooDollComponent, IdentificationToolsComponent, TimerComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -58,6 +61,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatCardModule,
     MatButtonModule,
     MatIconModule,
+    MatSliderModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {

@@ -28,8 +28,7 @@ td {
 
 .question-table th:nth-child(4),
 .question-table td:nth-child(4),
-.question-table th:nth-child(5),
-.question-table td:nth-child(5),
+
 .question-table th:nth-child(6),
 .question-table td:nth-child(6) {
   display: none;

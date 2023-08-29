@@ -1,0 +1,44 @@
+<div class="all">
+  <h2>Useful tools to help identify ghosts</h2>
+  <div class="items">
+    <div class="timer-container smudge">
+      <h3>Smudge Timer</h3>
+      <p>Start the timer as soon as the ghost gets into contact with the smudge! <br>Every time the timer passes a
+        Timestamp, the ghost is able to hunt again.</p>
+      <app-timer class="timer" [totalDuration]="totalDurationSmudge" [timestamps]="smudgeTimestamps"
+        (timerFinished)="stopSmudgeTimer()"></app-timer>
+    </div>
+
+    <div class="timer-container hunt smudge">
+      <h3>Hunt Cooldown</h3>
+      <p>Start the timer as soon as the ghost stops hunting! <br>Every time the timer passes a Timestamp, the ghost is
+        able to hunt again.</p>
+      <app-timer class="timer" [totalDuration]="totalDurationHunt" [timestamps]="huntTimestamps"
+        (timerFinished)="stopHuntTimer()"></app-timer>
+    </div>
+
+    <div class="sound smudge">
+      <h3>Footsteps</h3>
+      <p>Here text now pls</p>
+      <p>Current Speed: {{SpeedInMS}} m/s</p>
+      <div class="playandspeed">
+        <mat-icon (click)="playSound()" *ngIf="!playing">play_circle_outline</mat-icon>
+        <mat-icon (click)="playSound()" *ngIf="playing">pause_circle_outline</mat-icon>
+      </div>
+      <div class="volume">
+        <mat-icon>directions_walk</mat-icon>
+        <div class="range">
+          <input type="range" id="range1" [(ngModel)]="speed" (input)="calculateSpeed(speed)" max="3.53" step="0.01"/>
+        </div>
+        <mat-icon>directions_run</mat-icon>
+      </div>
+      <div class="volume">
+        <mat-icon>volume_down</mat-icon>
+        <div class="range">
+          <input type="range" id="range1" [(ngModel)]="volume" (input)="updateVolume()" />
+        </div>
+        <mat-icon>volume_up</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

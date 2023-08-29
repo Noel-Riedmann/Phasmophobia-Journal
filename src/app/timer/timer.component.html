@@ -1,0 +1,17 @@
+<div class="timerandbutton">
+  <div>
+    <mat-icon (click)="toggleTimer()" *ngIf="!isTimerRunning">play_circle_outline</mat-icon>
+  </div>
+  <div>
+    <mat-icon (click)="toggleTimer()" *ngIf="isTimerRunning">pause_circle_outline</mat-icon>
+  </div>
+  <div class="progress-bar">
+    <div class="progress" [style.width.%]="progress"></div>
+    <div class="timestamp" *ngFor="let timestamp of timestamps" [style.left.%]="timestamp.position">
+      <div class="timestamp-container">
+        <span class="timestamp-text">{{ timestamp.label }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="timer">{{ formatTime(timePassed) }}</div>
