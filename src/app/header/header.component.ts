@@ -1,6 +1,7 @@
 import { Component, ViewChild, ChangeDetectorRef, Renderer2 } from '@angular/core';
 import { LanguageService } from '../language.service';
 import { MatIcon } from '@angular/material/icon';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,8 @@ export class HeaderComponent {
   logoSrc = 'assets/images/logo.png';
   isDark = false;
 
-  constructor(private languageService: LanguageService, private cdr: ChangeDetectorRef, private renderer: Renderer2) {
+
+  constructor(private languageService: LanguageService, private cdr: ChangeDetectorRef, private renderer: Renderer2, private router: Router) {
     this.language = this.languageService.getCurrentLanguage();
 
 
@@ -51,31 +53,40 @@ export class HeaderComponent {
   }
 
 
-changeLanguage(event: any) {
-  const language = event.target.value;
-  console.log('Selected language:', language);
-  this.language = language;
-  this.languageService.setCurrentLanguage(language);
-}
-
-
-getCurrentLanguage(): string {
-  return this.languageService.getCurrentLanguage();
-}
-
-
-toggleTheme() {
-  this.isDark = !this.isDark;
-  if (this.isDark) {
-    localStorage.setItem('theme', 'dark');
-    this.logoSrc = 'assets/images/logo-dark.png';
-    this.renderer.setAttribute(document.documentElement, 'data-theme', 'dark');
-  } else {
-    localStorage.removeItem('theme');
-    this.logoSrc = 'assets/images/logo.png';
-    this.renderer.removeAttribute(document.documentElement, 'data-theme');
+  changeLanguage(event: any) {
+    const language = event.target.value;
+    console.log('Selected language:', language);
+    this.language = language;
+    this.languageService.setCurrentLanguage(language);
   }
-}
+
+
+  getCurrentLanguage(): string {
+    return this.languageService.getCurrentLanguage();
+  }
+
+
+  toggleTheme() {
+    this.isDark = !this.isDark;
+    if (this.isDark) {
+      localStorage.setItem('theme', 'dark');
+      this.logoSrc = 'assets/images/logo-dark.png';
+      this.renderer.setAttribute(document.documentElement, 'data-theme', 'dark');
+    } else {
+      localStorage.removeItem('theme');
+      this.logoSrc = 'assets/images/logo.png';
+      this.renderer.removeAttribute(document.documentElement, 'data-theme');
+    }
+  }
+
+  toggleMenu() {
+    if (this.router.url != '/navigation/menu') {
+      this.router.navigate(['/navigation/menu'])
+    }
+    else if (this.router.url == '/navigation/menu') {
+      window.history.back();
+    }
+  }
 }
 
 

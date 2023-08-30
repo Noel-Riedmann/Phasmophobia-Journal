@@ -97,5 +97,11 @@ export class IdentificationToolsComponent {
     this.SpeedInMS = speed;
     this.speed = speedHTML;
     this.currentGhostInfo = name;
+
+    if(window.innerWidth < 1380)
+    setTimeout(() => {
+      window.scrollTo(99999, 99999)
+    },
+      10);
   }
 }
