@@ -1,0 +1,20 @@
+.ghosts{
+  display: flex;
+  flex-direction: row;
+}
+
+.frame{
+  text-align: center;
+}
+
+.img{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  border-style: solid;
+  justify-content: center;
+}
+
+.oni, .phantom, .normal{
+  height: 90px;
+}

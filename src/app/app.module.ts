@@ -38,6 +38,7 @@ import { VoodooDollComponent } from './cursed-possessions/voodoo-doll/voodoo-dol
 import { IdentificationToolsComponent } from './identification-tools/identification-tools.component';
 import { TimerComponent } from './timer/timer.component';
 import {MatSliderModule} from '@angular/material/slider';
+import { GhostBlinkingComponent } from './identification-tools/ghost-blinking/ghost-blinking.component';
 
 
 
@@ -47,7 +48,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent, HomePageComponent, AboutPageComponent, ActiveLinkDirective, HauntedMirrorComponent, MonkeyPawComponent, CursedHuntComponent, MusicBoxComponent, OuijaBoardComponent, SummoningCircleComponent, VoodooDollComponent, IdentificationToolsComponent, TimerComponent],
+  declarations: [AppComponent, GhostsListComponent, GhostDetailsComponent, HeaderComponent, NavigationMenuComponent, CursedPossesionsComponent, TarotCardsComponent, HomePageComponent, AboutPageComponent, ActiveLinkDirective, HauntedMirrorComponent, MonkeyPawComponent, CursedHuntComponent, MusicBoxComponent, OuijaBoardComponent, SummoningCircleComponent, VoodooDollComponent, IdentificationToolsComponent, TimerComponent, GhostBlinkingComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

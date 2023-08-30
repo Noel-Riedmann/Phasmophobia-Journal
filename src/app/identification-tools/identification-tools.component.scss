@@ -114,7 +114,7 @@ h3 {
   scale: (1.05);
 }
 
-.ghostbtn.active{
+.ghostbtn.active {
   background-color: var(--ghost-speed-button-active)
 }
 
@@ -149,7 +149,7 @@ h3 {
   scale: (1.05);
 }
 
-.ghostSpeedButton.active{
+.ghostSpeedButton.active {
   background-color: var(--ghost-speed-button-active);
 }
 
@@ -226,7 +226,8 @@ h3 {
       width: 80%;
       min-width: 0;
     }
-    h2{
+
+    h2 {
       font-size: 1.85rem;
     }
   }
@@ -269,4 +270,30 @@ h3 {
   margin-left: 8px;
 
 }
+
+.flickeringghosts {
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+}
+
+.ghost-flickering {
+  width: 30%;
+  border-style: solid;
+}
+
+.oni-flickering,
+.phantom-flickering,
+.normal-flickering {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.phntm.hide, .nrml.hide, .oni.hide {
+  display: none;
+}
+
 

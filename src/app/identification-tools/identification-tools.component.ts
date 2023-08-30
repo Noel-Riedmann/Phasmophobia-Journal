@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { delay } from 'rxjs';
-import { Input, Output, EventEmitter } from '@angular/core';
+import { delay, interval, timer } from 'rxjs';
+import { defer, of, repeat } from 'rxjs';
 
 
 export interface CustomTimestamp<T> {
@@ -98,10 +98,11 @@ export class IdentificationToolsComponent {
     this.speed = speedHTML;
     this.currentGhostInfo = name;
 
-    if(window.innerWidth < 1380)
-    setTimeout(() => {
-      window.scrollTo(99999, 99999)
-    },
-      10);
+    if (window.innerWidth < 1380)
+      setTimeout(() => {
+        window.scrollTo(99999, 99999)
+      },
+        10);
   }
 }
+
