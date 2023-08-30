@@ -45,3 +45,9 @@
 .mat-icon:hover{
   cursor: pointer;
 }
+
+@media screen and (max-width: 410px) {
+  .timestamp-text{
+    font-size: small;
+  }
+}

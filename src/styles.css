@@ -79,16 +79,17 @@ input::-webkit-search-cancel-button {
 }
 
 .progress {
-  background-color:var(--progress-color);
+  background-color: var(--progress-color);
 }
 
 .progress-bar {
   background-color: var(--progress-bar-color);
 }
 
-.smudge{
+.smudge {
   background-color: var(--tools-background-color);
 }
+
 
 :root {
   --background-image: url('src/assets/images/background.png');
@@ -104,6 +105,8 @@ input::-webkit-search-cancel-button {
   --progress-color: #dd834f;
   --progress-bar-color: #fcdd9b;
   --tools-background-color: rgb(241, 194, 105);
+  --ghost-speed-button: #dd834f;
+  --ghost-speed-button-active: rgb(200, 131, 79);
 }
 
 [data-theme='dark'] {
@@ -120,5 +123,6 @@ input::-webkit-search-cancel-button {
   --progress-color: lightblue;
   --progress-bar-color: rgb(173, 179, 230);
   --tools-background-color: rgb(86, 86, 163);
+  --ghost-speed-button: rgb(109, 109, 216);
+  --ghost-speed-button-active: rgb(109, 109, 180);
 }
-

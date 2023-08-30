@@ -6,7 +6,7 @@
   width: 700px;
   padding: 20px;
   border-radius: 10px;
-  margin-top: 2%;
+  margin-top: 20px;
 }
 
 .items {
@@ -25,7 +25,7 @@ h3 {
   align-self: flex-start;
 }
 
-p {
+.p {
   margin-bottom: 40px;
   align-self: flex-start;
 }
@@ -51,13 +51,13 @@ p {
 
 #range1::-webkit-slider-runnable-track {
   height: 15px;
-  background: #fcdd9b;
+  background: var(--progress-bar-color);
   border-radius: 16px;
 }
 
 #range1::-moz-range-track {
   height: 15px;
-  background: #fcdd9b;
+  background: var(--progress-bar-color);
   border-radius: 16px;
 }
 
@@ -68,8 +68,8 @@ p {
   width: 15px;
   background-color: #fff;
   border-radius: 50%;
-  border: 2px solid #dd834f;
-  box-shadow: -407px 0 0 400px #dd834f;
+  border: 2px solid var(--progress-color);
+  box-shadow: -407px 0 0 400px var(--progress-color);
 }
 
 #range1::-moz-range-thumb {
@@ -77,9 +77,10 @@ p {
   width: 15px;
   background-color: #fff;
   border-radius: 50%;
-  border: 1px solid #dd834f;
-  box-shadow: -407px 0 0 400px #dd834f;
+  border: 1px solid var(--progress-color);
+  box-shadow: -407px 0 0 400px var(--progress-color);
 }
+
 
 .range {
   padding-top: 1px;
@@ -87,5 +88,185 @@ p {
 
 .mat-icon:hover {
   cursor: pointer;
+}
+
+.sound {
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+}
+
+.ghostbtn {
+  font-family: PhasmophobiaJournalFont;
+  font-size: larger;
+  border-style: none;
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  background-color: var(--ghost-speed-button);
+  color: var(--text);
+  margin: 10px;
+}
+
+.ghostbtn:hover {
+  box-shadow: 0px 0px 10px var(--progress-bar-color);
+  cursor: pointer;
+  scale: (1.05);
+}
+
+.ghostbtn.active{
+  background-color: var(--ghost-speed-button-active)
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+}
+
+.info {
+  margin: 10px;
+}
+
+.ghostSpeedButton {
+  font-family: PhasmophobiaJournalFont;
+  font-size: larger;
+  border-style: none;
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  background-color: var(--ghost-speed-button);
+  color: var(--text);
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.ghostSpeedButton:hover {
+  box-shadow: 0px 0px 10px var(--progress-bar-color);
+  cursor: pointer;
+  scale: (1.05);
+}
+
+.ghostSpeedButton.active{
+  background-color: var(--ghost-speed-button-active);
+}
+
+@media screen and (min-width: 1520px) {
+  .items {
+    flex-direction: row;
+  }
+
+  .sound {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .items {
+    flex-direction: row;
+  }
+
+  .sound {
+    margin-left: 50px;
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .items {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 730px) {
+    .smudge {
+      width: 500px;
+    }
+
+    .items {
+      align-items: center;
+    }
+
+    .sound {
+      height: auto;
+      flex-direction: column;
+    }
+
+    .left {
+      width: 100%;
+    }
+
+    .right {
+      width: 100%;
+    }
+
+    .all {
+      text-align: center;
+    }
+
+    h3 {
+      text-align: left;
+    }
+
+    .range {
+      min-width: 90%;
+    }
+
+
+  }
+
+
+  @media screen and (max-width: 510px) {
+    .smudge {
+      width: 400px;
+    }
+
+    .range {
+      width: 80%;
+      min-width: 0;
+    }
+    h2{
+      font-size: 1.85rem;
+    }
+  }
+
+  @media screen and (max-width: 410px) {
+    .smudge {
+      width: 300px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .range {
+      width: 80%;
+      min-width: 0;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .smudge {
+      width: 270px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    .range {
+      width: 80%;
+      min-width: 0;
+    }
+  }
+}
+
+.playSound {
+  scale: 2;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 8px;
+
 }
 

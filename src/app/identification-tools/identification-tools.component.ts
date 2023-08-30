@@ -46,10 +46,26 @@ export class IdentificationToolsComponent {
 
   volume: number = 50;
   audio: HTMLAudioElement = new Audio();
-  constructor() {
 
+  constructor() {
+    this.loadVolumeSetting();
     this.updateVolume();
   }
+
+  loadVolumeSetting() {
+    const storedVolume = localStorage.getItem('volume');
+    if (storedVolume !== null) {
+      this.volume = parseFloat(storedVolume);
+    } else {
+      this.volume = 50;
+    }
+  }
+
+  updateVolume() {
+    this.audio.volume = this.volume / 100;
+    localStorage.setItem('volume', this.volume.toString());
+  }
+
   speed: number = 2;
   playing: boolean = false;
   playSound() {
@@ -67,13 +83,19 @@ export class IdentificationToolsComponent {
     }
   }
 
-  updateVolume() {
-    this.audio.volume = this.volume / 100;
-  }
 
   SpeedInMS: number = this.speed * 0.85;;
-  calculateSpeed(speed: number){
-     this.SpeedInMS = Math.round(speed * 0.85 * 100)/100;
-     this.audio.playbackRate = this.speed;
+  calculateSpeed(speed: number) {
+    this.SpeedInMS = Math.round(speed * 0.85 * 100) / 100;
+    this.audio.playbackRate = this.speed;
+  }
+
+  currentGhostInfo: string = "Other";
+  updateSpeed(speed: number, name: string) {
+    const speedHTML = Math.round(speed * 1.17647 * 100) / 100;
+    this.audio.playbackRate = speedHTML;
+    this.SpeedInMS = speed;
+    this.speed = speedHTML;
+    this.currentGhostInfo = name;
   }
 }

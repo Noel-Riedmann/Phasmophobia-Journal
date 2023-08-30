@@ -1,43 +1,127 @@
 <div class="all">
   <h2>Useful tools to help identify ghosts</h2>
   <div class="items">
-    <div class="timer-container smudge">
-      <h3>Smudge Timer</h3>
-      <p>Start the timer as soon as the ghost gets into contact with the smudge! <br>Every time the timer passes a
-        Timestamp, the ghost is able to hunt again.</p>
-      <app-timer class="timer" [totalDuration]="totalDurationSmudge" [timestamps]="smudgeTimestamps"
-        (timerFinished)="stopSmudgeTimer()"></app-timer>
-    </div>
+    <div class="timers">
+      <div class="timer-container smudge">
+        <h3>Smudge Timer</h3>
+        <p class="p">Start the timer as soon as the ghost comes into contact with the smudge!<br>Every time the timer
+          reaches a
+          timestamp, the ghost is able to hunt again.</p>
+        <app-timer class="timer" [totalDuration]="totalDurationSmudge" [timestamps]="smudgeTimestamps"
+          (timerFinished)="stopSmudgeTimer()"></app-timer>
+      </div>
 
-    <div class="timer-container hunt smudge">
-      <h3>Hunt Cooldown</h3>
-      <p>Start the timer as soon as the ghost stops hunting! <br>Every time the timer passes a Timestamp, the ghost is
-        able to hunt again.</p>
-      <app-timer class="timer" [totalDuration]="totalDurationHunt" [timestamps]="huntTimestamps"
-        (timerFinished)="stopHuntTimer()"></app-timer>
+      <div class="timer-container hunt smudge">
+        <h3>Hunt Cooldown</h3>
+        <p class="p">Start the timer as soon as the ghost stops hunting!<br>Every time the timer reaches a timestamp,
+          the ghost is
+          able to hunt again.</p>
+        <app-timer class="timer" [totalDuration]="totalDurationHunt" [timestamps]="huntTimestamps"
+          (timerFinished)="stopHuntTimer()"></app-timer>
+      </div>
     </div>
-
     <div class="sound smudge">
-      <h3>Footsteps</h3>
-      <p>Here text now pls</p>
-      <p>Current Speed: {{SpeedInMS}} m/s</p>
-      <div class="playandspeed">
-        <mat-icon (click)="playSound()" *ngIf="!playing">play_circle_outline</mat-icon>
-        <mat-icon (click)="playSound()" *ngIf="playing">pause_circle_outline</mat-icon>
-      </div>
-      <div class="volume">
-        <mat-icon>directions_walk</mat-icon>
-        <div class="range">
-          <input type="range" id="range1" [(ngModel)]="speed" (input)="calculateSpeed(speed)" max="3.53" step="0.01"/>
+      <div class="left">
+        <h3>Ghost Speeds</h3>
+        <p>Click on a ghost to set its speed or use the slider to set a custom speed.<br>Range: 1m/s - 3m/s.</p>
+        <br>
+        <p>Speed: <strong>{{SpeedInMS}} m/s</strong></p>
+        <div class="playandspeed">
+          <mat-icon class="playSound" (click)="playSound()" *ngIf="!playing">play_circle_outline</mat-icon>
+          <mat-icon class="playSound" (click)="playSound()" *ngIf="playing">pause_circle_outline</mat-icon>
         </div>
-        <mat-icon>directions_run</mat-icon>
-      </div>
-      <div class="volume">
-        <mat-icon>volume_down</mat-icon>
-        <div class="range">
-          <input type="range" id="range1" [(ngModel)]="volume" (input)="updateVolume()" />
+        <div class="volume">
+          <mat-icon *ngIf="SpeedInMS <= 1.7">directions_walk</mat-icon>
+          <mat-icon *ngIf="SpeedInMS > 1.7">directions_run</mat-icon>
+          <div class="range">
+            <input type="range" id="range1" class="range1" [(ngModel)]="speed" (input)="calculateSpeed(speed)"
+              max="3.53" min="1.175" step="0.01" />
+          </div>
         </div>
-        <mat-icon>volume_up</mat-icon>
+        <div class="volume">
+          <mat-icon (click)="volume = 0" *ngIf="volume > 0 && volume < 50">volume_down</mat-icon>
+          <mat-icon (click)="volume = 30" *ngIf="volume == 0">volume_off </mat-icon>
+          <mat-icon (click)="volume = 0" *ngIf="volume >= 50">volume_up</mat-icon>
+          <div class="range">
+            <input type="range" id="range1" [(ngModel)]="volume" (input)="updateVolume()" />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="btnList">
+          <button class="ghostbtn" (click)="updateSpeed(1.7, 'Other')"
+            [class.active]="currentGhostInfo == 'Other'">Default</button>
+          <button class="ghostbtn" (click)="updateSpeed(1.1, 'Revenant')"
+            [class.active]="currentGhostInfo == 'Revenant'">Revenant</button>
+          <button class="ghostbtn" (click)="updateSpeed(2.5, 'Moroi')"
+            [class.active]="currentGhostInfo == 'Moroi'">Moroi</button>
+          <button class="ghostbtn" (click)="updateSpeed(3, 'Deogen')"
+            [class.active]="currentGhostInfo == 'Deogen'">Deogen</button>
+          <button class="ghostbtn" (click)="updateSpeed(2.7, 'Hantu')"
+            [class.active]="currentGhostInfo == 'Hantu'">Hantu</button>
+          <button class="ghostbtn" (click)="updateSpeed(2.5, 'Raiju')"
+            [class.active]="currentGhostInfo == 'Raiju'">Raiju</button>
+          <button class="ghostbtn" (click)="updateSpeed(2.75, 'Thaye')"
+            [class.active]="currentGhostInfo == 'Thaye'">Thaye</button>
+          <button class="ghostbtn" (click)="updateSpeed(1.87, 'The Twins')"
+            [class.active]="currentGhostInfo == 'The Twins'">The Twins</button>
+
+        </div>
+        <div class="info">
+          <div class="Other" *ngIf="currentGhostInfo == 'Other'">
+            <h3>Default</h3>
+            <p>This is the default ghost speed that most ghosts use! Its speed is 1.7m/s.</p>
+          </div>
+          <div class="Revenant" *ngIf="currentGhostInfo == 'Revenant'">
+            <h3>Revenant</h3>
+            <p>Speeds up to a rate of 3 m/s when able to see the player. Slows down to an incredibly slow rate of 1.1
+              m/s when the player is hiding.</p>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.1, 'Revenant')" [class.active]="SpeedInMS==1.1">Slow Revenant</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(3, 'Revenant')" [class.active]="SpeedInMS==3">Fast Revenant</button>
+          </div>
+          <div class="Deogen" *ngIf="currentGhostInfo == 'Deogen'">
+            <h3>Deogen</h3>
+            <p>Moves up to 3 m/s when far from the player. Slows down to a speed of 0.4 m/swhen close to the player,
+              making the Deogen one of the slowest possible Ghosts in the game under this condition.</p>
+          </div>
+          <div class="Hantu" *ngIf="currentGhostInfo == 'Hantu'">
+            <h3>Hantu</h3>
+            <p>Speed increases up to 2.7 m/s depending on how low the temperature is. Slows down to a speed of as slow
+              as 1.4 m/s in warm areas.</p>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.4, 'Hantu')" [class.active]="SpeedInMS==1.4">Slow Hantu</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(2.7, 'Hantu')" [class.active]="SpeedInMS==2.7">Fast Hantu</button>
+          </div>
+          <div class="Jinn" *ngIf="currentGhostInfo == 'Jinn'">
+            <h3>Jinn</h3>
+            <p>Moves at 2.5 m/s while the player is far from the Ghost and the generator is actively running.</p>
+          </div>
+          <div class="Moroi " *ngIf="currentGhostInfo == 'Moroi'">
+            <h3>Moroi</h3>
+            <p>Speed increases up to 2.5 m/s depending on the player's Sanity, with higher Sanity levels meaning faster
+              speeds. The Moroi is one of the fastest Ghosts in the game if they actually manage to see a human, dashing
+              up to you at a rate of up to 3.9 m/s!</p>
+          </div>
+          <div class="Raiju" *ngIf="currentGhostInfo == 'Raiju'">
+            <h3>Raiju </h3>
+            <p>Speed increases to 2.5 m/s when in the range of certain actively running electronics.</p>
+          </div>
+          <div class="Thaye" *ngIf="currentGhostInfo == 'Thaye'">
+            <h3>Thaye</h3>
+            <p>Starts at a rapid speed of 2.75 m/s. Speed decreases the longer the Ghost stays in a certain room, down
+              to a low of 1 m/s.</p>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1, 'Thaye')" [class.active]="SpeedInMS==1">Slow Thaye</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(2.75, 'Thaye')" [class.active]="SpeedInMS==2.75">Fast Thaye</button>
+          </div>
+          <div class="The Twins" *ngIf="currentGhostInfo == 'The Twins'">
+            <h3>The Twins</h3>
+            <p> Each Twin has a different base speed, making this Ghost a bit confusing to go against. One Twin is
+              faster than the base speed by 10%, while the other is slower by 10%. You might get varying reads on the
+              Twins for this reason.</p>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.53, 'The Twins')" [class.active]="SpeedInMS==1.53">Slow Twin</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.87, 'The Twins')" [class.active]="SpeedInMS==1.87">Fast Twin</button>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

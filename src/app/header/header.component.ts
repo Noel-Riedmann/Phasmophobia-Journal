@@ -22,33 +22,60 @@ export class HeaderComponent {
       this.logoSrc = 'assets/images/logo-dark.png';
       this.renderer.setAttribute(document.documentElement, 'data-theme', 'dark');
     }
-  }
 
-  changeLanguage(event: any) {
-    const language = event.target.value;
-    console.log('Selected language:', language);
-    this.language = language;
-    this.languageService.setCurrentLanguage(language);
-  }
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
+    // Add an event listener to listen for changes to the matches property
+    darkModeMediaQuery.addEventListener('change', (event: MediaQueryListEvent) => {
+      // Check if the user has enabled forced dark mode
+      if (event.matches) {
+        // Set the data-theme attribute to 'dark' to apply your dark theme
+        this.isDark = true;
+        this.logoSrc = 'assets/images/logo-dark.png';
+        this.renderer.setAttribute(document.documentElement, 'data-theme', 'dark');
+      } else {
+        // Remove the data-theme attribute to apply your light theme
+        this.isDark = false;
+        this.logoSrc = 'assets/images/logo.png';
+        this.renderer.removeAttribute(document.documentElement, 'data-theme');
+      }
+    });
 
-  getCurrentLanguage(): string {
-    return this.languageService.getCurrentLanguage();
-  }
-
-
-  toggleTheme() {
-    this.isDark = !this.isDark;
-    if (this.isDark) {
-      localStorage.setItem('theme', 'dark');
+    // Check if the user has enabled forced dark mode when the page loads
+    if (darkModeMediaQuery.matches) {
+      // Set the data-theme attribute to 'dark' to apply your dark theme
+      this.isDark = true;
       this.logoSrc = 'assets/images/logo-dark.png';
       this.renderer.setAttribute(document.documentElement, 'data-theme', 'dark');
-    } else {
-      localStorage.removeItem('theme');
-      this.logoSrc = 'assets/images/logo.png';
-      this.renderer.removeAttribute(document.documentElement, 'data-theme');
     }
   }
+
+
+changeLanguage(event: any) {
+  const language = event.target.value;
+  console.log('Selected language:', language);
+  this.language = language;
+  this.languageService.setCurrentLanguage(language);
+}
+
+
+getCurrentLanguage(): string {
+  return this.languageService.getCurrentLanguage();
+}
+
+
+toggleTheme() {
+  this.isDark = !this.isDark;
+  if (this.isDark) {
+    localStorage.setItem('theme', 'dark');
+    this.logoSrc = 'assets/images/logo-dark.png';
+    this.renderer.setAttribute(document.documentElement, 'data-theme', 'dark');
+  } else {
+    localStorage.removeItem('theme');
+    this.logoSrc = 'assets/images/logo.png';
+    this.renderer.removeAttribute(document.documentElement, 'data-theme');
+  }
+}
 }
 
 

@@ -10,6 +10,6 @@ export class HomePageComponent {
   constructor(private meta: Meta,  private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    this.meta.addTag({ name: 'description', content: 'Phasmophobia Journal: Ghost details, cursed possessions, and more' });
+    this.meta.addTag({ name: 'description', content: 'Phasmophobia Journal: Ghost details, cursed possessions, ghost identifying tools and more... Your personal Phasmophobia Cheat Sheet!' });
   }
 }
