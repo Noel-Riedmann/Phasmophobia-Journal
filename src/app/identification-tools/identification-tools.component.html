@@ -19,6 +19,16 @@
         <app-timer class="timer" [totalDuration]="totalDurationHunt" [timestamps]="huntTimestamps"
           (timerFinished)="stopHuntTimer()"></app-timer>
       </div>
+
+      <!--
+      <div class="timer-container hunt smudge">
+        <h3>Ghost Flickering</h3>
+        <p class="p">Here you can see how different ghosts flicker during the hunt </p>
+        <div class="flickeringghosts">
+          <app-ghost-blinking></app-ghost-blinking>
+        </div>
+      </div>
+      -->
     </div>
     <div class="sound smudge">
       <div class="left">
@@ -76,8 +86,10 @@
             <h3>Revenant</h3>
             <p>Speeds up to a rate of 3 m/s when able to see the player. Slows down to an incredibly slow rate of 1.1
               m/s when the player is hiding.</p>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1.1, 'Revenant')" [class.active]="SpeedInMS==1.1">Slow Revenant</button>
-            <button class="ghostSpeedButton" (click)="updateSpeed(3, 'Revenant')" [class.active]="SpeedInMS==3">Fast Revenant</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.1, 'Revenant')" [class.active]="SpeedInMS==1.1">Slow
+              Revenant</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(3, 'Revenant')" [class.active]="SpeedInMS==3">Fast
+              Revenant</button>
           </div>
           <div class="Deogen" *ngIf="currentGhostInfo == 'Deogen'">
             <h3>Deogen</h3>
@@ -88,8 +100,10 @@
             <h3>Hantu</h3>
             <p>Speed increases up to 2.7 m/s depending on how low the temperature is. Slows down to a speed of as slow
               as 1.4 m/s in warm areas.</p>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1.4, 'Hantu')" [class.active]="SpeedInMS==1.4">Slow Hantu</button>
-            <button class="ghostSpeedButton" (click)="updateSpeed(2.7, 'Hantu')" [class.active]="SpeedInMS==2.7">Fast Hantu</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.4, 'Hantu')" [class.active]="SpeedInMS==1.4">Slow
+              Hantu</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(2.7, 'Hantu')" [class.active]="SpeedInMS==2.7">Fast
+              Hantu</button>
           </div>
           <div class="Jinn" *ngIf="currentGhostInfo == 'Jinn'">
             <h3>Jinn</h3>
@@ -109,16 +123,20 @@
             <h3>Thaye</h3>
             <p>Starts at a rapid speed of 2.75 m/s. Speed decreases the longer the Ghost stays in a certain room, down
               to a low of 1 m/s.</p>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1, 'Thaye')" [class.active]="SpeedInMS==1">Slow Thaye</button>
-            <button class="ghostSpeedButton" (click)="updateSpeed(2.75, 'Thaye')" [class.active]="SpeedInMS==2.75">Fast Thaye</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1, 'Thaye')" [class.active]="SpeedInMS==1">Slow
+              Thaye</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(2.75, 'Thaye')" [class.active]="SpeedInMS==2.75">Fast
+              Thaye</button>
           </div>
           <div class="The Twins" *ngIf="currentGhostInfo == 'The Twins'">
             <h3>The Twins</h3>
             <p> Each Twin has a different base speed, making this Ghost a bit confusing to go against. One Twin is
               faster than the base speed by 10%, while the other is slower by 10%. You might get varying reads on the
               Twins for this reason.</p>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1.53, 'The Twins')" [class.active]="SpeedInMS==1.53">Slow Twin</button>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1.87, 'The Twins')" [class.active]="SpeedInMS==1.87">Fast Twin</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.53, 'The Twins')"
+              [class.active]="SpeedInMS==1.53">Slow Twin</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.87, 'The Twins')"
+              [class.active]="SpeedInMS==1.87">Fast Twin</button>
           </div>
         </div>
 
