@@ -1,20 +1,69 @@
-.ghosts{
+.ghosts {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
-.frame{
+.frame {
   text-align: center;
+  align-items: center;
 }
 
-.img{
+.img {
   height: 100px;
-  width: 100px;
+  width: 200px;
   display: flex;
-  border-style: solid;
   justify-content: center;
 }
 
-.oni, .phantom, .normal{
+.oni,
+.phantom,
+.normal {
   height: 90px;
+}
+
+.oni.hide,
+.phantom.hide,
+.normal.hide {
+  display: none;
+}
+
+.hide {
+  font-family: PhasmophobiaJournalFont;
+  font-size: larger;
+  border-style: none;
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  background-color: var(--ghost-speed-button);
+  margin-top: 5px;
+  color: var(--text);
+
+}
+
+.hide:hover {
+  box-shadow: 0px 0px 10px var(--progress-bar-color);
+  cursor: pointer;
+  scale: (1.05);
+}
+
+.hide.active {
+  background-color: var(--ghost-speed-button-active);
+}
+
+@media screen and (max-width: 730px) {
+  .img {
+    height: 100px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+ .ghosts{
+  flex-direction: column;
+ }
+ .frame{
+  display: flex;
+  flex-direction: row;
+ }
 }

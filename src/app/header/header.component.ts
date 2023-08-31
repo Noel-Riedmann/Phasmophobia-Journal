@@ -44,7 +44,7 @@ export class HeaderComponent {
     });
 
     // Check if the user has enabled forced dark mode when the page loads
-    if (darkModeMediaQuery.matches) {
+    if (darkModeMediaQuery.matches &&  localStorage.getItem('theme') != 'light') {
       // Set the data-theme attribute to 'dark' to apply your dark theme
       this.isDark = true;
       this.logoSrc = 'assets/images/logo-dark.png';
@@ -73,7 +73,7 @@ export class HeaderComponent {
       this.logoSrc = 'assets/images/logo-dark.png';
       this.renderer.setAttribute(document.documentElement, 'data-theme', 'dark');
     } else {
-      localStorage.removeItem('theme');
+      localStorage.setItem('theme', 'light');
       this.logoSrc = 'assets/images/logo.png';
       this.renderer.removeAttribute(document.documentElement, 'data-theme');
     }

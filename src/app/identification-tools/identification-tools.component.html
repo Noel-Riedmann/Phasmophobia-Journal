@@ -20,20 +20,19 @@
           (timerFinished)="stopHuntTimer()"></app-timer>
       </div>
 
-      <!--
       <div class="timer-container hunt smudge">
-        <h3>Ghost Flickering</h3>
-        <p class="p">Here you can see how different ghosts flicker during the hunt </p>
+        <h3>Ghost Blinking</h3>
+        <p class="p">Here you can see how different ghosts flicker during the hunt.</p>
         <div class="flickeringghosts">
-          <app-ghost-blinking></app-ghost-blinking>
+          <app-ghost-blinking class="blinking"></app-ghost-blinking>
         </div>
       </div>
-      -->
     </div>
     <div class="sound smudge">
       <div class="left">
         <h3>Ghost Speeds</h3>
-        <p>Click on a ghost to set its speed or use the slider to set a custom speed.<br>Range: 1m/s - 3m/s.</p>
+        <p>Click on a ghost to set its speed or use the slider to set a custom speed.<br>Range: 1m/s - 3m/s.</p> <br>
+        <p>WIP!!!</p>
         <br>
         <p>Speed: <strong>{{SpeedInMS}} m/s</strong></p>
         <div class="playandspeed">

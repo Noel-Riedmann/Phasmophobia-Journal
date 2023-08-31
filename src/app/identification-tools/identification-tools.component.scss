@@ -274,7 +274,6 @@ h3 {
 .flickeringghosts {
   display: flex;
   flex-direction: row;
-  border-style: solid;
 }
 
 .ghost-flickering {
@@ -292,8 +291,29 @@ h3 {
   width: 100%;
 }
 
-.phntm.hide, .nrml.hide, .oni.hide {
+.phntm.hide,
+.nrml.hide,
+.oni.hide {
   display: none;
 }
 
 
+.blinking {
+  min-width: 670px;
+}
+
+@media screen and (max-width: 730px) {
+  .blinking {
+    min-width: 500px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .flickeringghosts {
+    max-width: 300px;
+  }
+  .blinking {
+    min-width: 0;
+  }
+
+}
