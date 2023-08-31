@@ -32,49 +32,47 @@
       <div class="left">
         <h3>Ghost Speeds</h3>
         <p>Click on a ghost to set its speed or use the slider to set a custom speed.<br>Range: 1m/s - 3m/s.</p> <br>
-        <p>WIP!!!</p>
         <br>
-        <p>Speed: <strong>{{SpeedInMS}} m/s</strong></p>
+        <p>Speed: <strong>{{speed}} m/s</strong></p>
         <div class="playandspeed">
-          <mat-icon class="playSound" (click)="playSound()" *ngIf="!playing">play_circle_outline</mat-icon>
-          <mat-icon class="playSound" (click)="playSound()" *ngIf="playing">pause_circle_outline</mat-icon>
+          <mat-icon class="playSound" (click)="playSound(speed)" *ngIf="!playing">play_circle_outline</mat-icon>
+          <mat-icon class="playSound" (click)="playSound(speed)" *ngIf="playing">pause_circle_outline</mat-icon>
         </div>
         <div class="volume">
-          <mat-icon *ngIf="SpeedInMS <= 1.7">directions_walk</mat-icon>
-          <mat-icon *ngIf="SpeedInMS > 1.7">directions_run</mat-icon>
+          <mat-icon *ngIf="speed <= 1.7">directions_walk</mat-icon>
+          <mat-icon *ngIf="speed > 1.7">directions_run</mat-icon>
           <div class="range">
-            <input type="range" id="range1" class="range1" [(ngModel)]="speed" (input)="calculateSpeed(speed)"
-              max="3.53" min="1.175" step="0.01" />
+            <input type="range" id="range1" class="range1" [(ngModel)]="speed" (input)="updateSpeed(speed)" max="3"
+              min="0.4" step="0.01" />
           </div>
         </div>
         <div class="volume">
-          <mat-icon (click)="volume = 0" *ngIf="volume > 0 && volume < 50">volume_down</mat-icon>
-          <mat-icon (click)="volume = 30" *ngIf="volume == 0">volume_off </mat-icon>
-          <mat-icon (click)="volume = 0" *ngIf="volume >= 50">volume_up</mat-icon>
+          <mat-icon (click)="volume = 0" *ngIf="volume > 0 && volume < 0.5">volume_down</mat-icon>
+          <mat-icon (click)="volume = 0.3" *ngIf="volume == 0">volume_off </mat-icon>
+          <mat-icon (click)="volume = 0" *ngIf="volume >= 0.5">volume_up</mat-icon>
           <div class="range">
-            <input type="range" id="range1" [(ngModel)]="volume" (input)="updateVolume()" />
+            <input type="range" id="range1" [(ngModel)]="volume" (input)="updateVolume()" max="1" min="0" step="0.01" />
           </div>
         </div>
       </div>
       <div class="right">
         <div class="btnList">
-          <button class="ghostbtn" (click)="updateSpeed(1.7, 'Other')"
+          <button class="ghostbtn" (click)="updateSpeed(1.7) + (currentGhostInfo='Other') + autoscroll()"
             [class.active]="currentGhostInfo == 'Other'">Default</button>
-          <button class="ghostbtn" (click)="updateSpeed(1.1, 'Revenant')"
+          <button class="ghostbtn" (click)="updateSpeed(1.1) + (currentGhostInfo='Revenant') + autoscroll()"
             [class.active]="currentGhostInfo == 'Revenant'">Revenant</button>
-          <button class="ghostbtn" (click)="updateSpeed(2.5, 'Moroi')"
+          <button class="ghostbtn" (click)="updateSpeed(2.5) + (currentGhostInfo='Moroi') + autoscroll()"
             [class.active]="currentGhostInfo == 'Moroi'">Moroi</button>
-          <button class="ghostbtn" (click)="updateSpeed(3, 'Deogen')"
+          <button class="ghostbtn" (click)="updateSpeed(3) + (currentGhostInfo='Deogen') + autoscroll()"
             [class.active]="currentGhostInfo == 'Deogen'">Deogen</button>
-          <button class="ghostbtn" (click)="updateSpeed(2.7, 'Hantu')"
+          <button class="ghostbtn" (click)="updateSpeed(2.7) + (currentGhostInfo='Hantu') + autoscroll()"
             [class.active]="currentGhostInfo == 'Hantu'">Hantu</button>
-          <button class="ghostbtn" (click)="updateSpeed(2.5, 'Raiju')"
+          <button class="ghostbtn" (click)="updateSpeed(2.5) + (currentGhostInfo='Raiju') + autoscroll()"
             [class.active]="currentGhostInfo == 'Raiju'">Raiju</button>
-          <button class="ghostbtn" (click)="updateSpeed(2.75, 'Thaye')"
+          <button class="ghostbtn" (click)="updateSpeed(2.75) + (currentGhostInfo='Thaye') + autoscroll()"
             [class.active]="currentGhostInfo == 'Thaye'">Thaye</button>
-          <button class="ghostbtn" (click)="updateSpeed(1.87, 'The Twins')"
+          <button class="ghostbtn" (click)="updateSpeed(1.87) + (currentGhostInfo='The Twins') + autoscroll()"
             [class.active]="currentGhostInfo == 'The Twins'">The Twins</button>
-
         </div>
         <div class="info">
           <div class="Other" *ngIf="currentGhostInfo == 'Other'">
@@ -85,24 +83,31 @@
             <h3>Revenant</h3>
             <p>Speeds up to a rate of 3 m/s when able to see the player. Slows down to an incredibly slow rate of 1.1
               m/s when the player is hiding.</p>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1.1, 'Revenant')" [class.active]="SpeedInMS==1.1">Slow
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.1)" [class.active]="speed==1.1">Slow
               Revenant</button>
-            <button class="ghostSpeedButton" (click)="updateSpeed(3, 'Revenant')" [class.active]="SpeedInMS==3">Fast
+            <button class="ghostSpeedButton" (click)="updateSpeed(3)" [class.active]="speed==3">Fast
               Revenant</button>
           </div>
           <div class="Deogen" *ngIf="currentGhostInfo == 'Deogen'">
             <h3>Deogen</h3>
             <p>Moves up to 3 m/s when far from the player. Slows down to a speed of 0.4 m/swhen close to the player,
               making the Deogen one of the slowest possible Ghosts in the game under this condition.</p>
+            <button class="ghostSpeedButton" (click)="updateSpeed(0.4)" [class.active]="speed==0.4">Slow
+              Deogen</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(3)" [class.active]="speed==3">Fast
+              Deogen</button>
           </div>
           <div class="Hantu" *ngIf="currentGhostInfo == 'Hantu'">
             <h3>Hantu</h3>
             <p>Speed increases up to 2.7 m/s depending on how low the temperature is. Slows down to a speed of as slow
               as 1.4 m/s in warm areas.</p>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1.4, 'Hantu')" [class.active]="SpeedInMS==1.4">Slow
-              Hantu</button>
-            <button class="ghostSpeedButton" (click)="updateSpeed(2.7, 'Hantu')" [class.active]="SpeedInMS==2.7">Fast
-              Hantu</button>
+            <br>
+            <div style="display: flex;">
+              <p>1.4m/s</p>
+              <div style="width: 80%;"><input type="range" id="range1" class="range1" [(ngModel)]="speed"
+                  (input)="updateSpeed(speed)" max="2.7" min="1.4" step="0.01" /></div>
+              <p>2.7/s</p>
+            </div>
           </div>
           <div class="Jinn" *ngIf="currentGhostInfo == 'Jinn'">
             <h3>Jinn</h3>
@@ -113,6 +118,15 @@
             <p>Speed increases up to 2.5 m/s depending on the player's Sanity, with higher Sanity levels meaning faster
               speeds. The Moroi is one of the fastest Ghosts in the game if they actually manage to see a human, dashing
               up to you at a rate of up to 3.9 m/s!</p>
+            <br>
+            <div style="display: flex;">
+              <p>1.5m/s</p>
+              <div style="width: 80%;"><input type="range" id="range1" class="range1" [(ngModel)]="speed"
+                  (input)="updateSpeed(speed)" max="2.5" min="1.5" step="0.01" /></div>
+              <p>2.5m/s</p>
+            </div>
+            <button class="ghostSpeedButton" (click)="updateSpeed(3.9)" [class.active]="speed==3.9">Moroi
+              3.9m/s</button>
           </div>
           <div class="Raiju" *ngIf="currentGhostInfo == 'Raiju'">
             <h3>Raiju </h3>
@@ -122,20 +136,21 @@
             <h3>Thaye</h3>
             <p>Starts at a rapid speed of 2.75 m/s. Speed decreases the longer the Ghost stays in a certain room, down
               to a low of 1 m/s.</p>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1, 'Thaye')" [class.active]="SpeedInMS==1">Slow
-              Thaye</button>
-            <button class="ghostSpeedButton" (click)="updateSpeed(2.75, 'Thaye')" [class.active]="SpeedInMS==2.75">Fast
-              Thaye</button>
+            <br>
+            <div style="display: flex;">
+              <p>1m/s</p>
+              <div style="width: 80%;"><input type="range" id="range1" class="range1" [(ngModel)]="speed"
+                  (input)="updateSpeed(speed)" max="2.75" min="1" step="0.01" /></div>
+              <p>2.75m/s</p>
+            </div>
           </div>
           <div class="The Twins" *ngIf="currentGhostInfo == 'The Twins'">
             <h3>The Twins</h3>
             <p> Each Twin has a different base speed, making this Ghost a bit confusing to go against. One Twin is
               faster than the base speed by 10%, while the other is slower by 10%. You might get varying reads on the
               Twins for this reason.</p>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1.53, 'The Twins')"
-              [class.active]="SpeedInMS==1.53">Slow Twin</button>
-            <button class="ghostSpeedButton" (click)="updateSpeed(1.87, 'The Twins')"
-              [class.active]="SpeedInMS==1.87">Fast Twin</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.53)" [class.active]="speed==1.53">Slow Twin</button>
+            <button class="ghostSpeedButton" (click)="updateSpeed(1.87)" [class.active]="speed==1.87">Fast Twin</button>
           </div>
         </div>
 

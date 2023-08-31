@@ -4,21 +4,27 @@
       <div class="img"><img class="phantom" [class.hide]="hidePhantom == true || phntmHide==true"
           src="/assets/images/ghost-flickering.png" alt="ghost"></div>
       <div class="info">
-        <p>Phantom</p><button class="hide" [class.active]="phntmHide==true" (click)="hide('phntm')">hide</button>
+        <p>Phantom</p>
+        <button *ngIf="phntmHide==false" class="hide" (click)="hide('phntm')">hide</button>
+        <button *ngIf="phntmHide==true" class="hide" (click)="hide('phntm')">show</button>
       </div>
     </div>
     <div class="frame">
       <div class="img"><img class="normal" [class.hide]="hideNormal == true || nrmlHide==true"
           src="/assets/images/ghost-flickering.png" alt="ghost"></div>
       <div class="info">
-        <p>Normal</p><button class="hide" [class.active]="nrmlHide==true" (click)="hide('nrml')">hide</button>
+        <p>Normal</p>
+        <button *ngIf="nrmlHide==false" class="hide" (click)="hide('nrml')">hide</button>
+        <button *ngIf="nrmlHide==true" class="hide" (click)="hide('nrml')">show</button>
       </div>
     </div>
     <div class="frame">
       <div class="img"><img class="oni" [class.hide]="hideOni == true || nHide==true"
           src="/assets/images/ghost-flickering.png" alt="ghost"></div>
       <div class="info">
-        <p>Oni</p><button class="hide" [class.active]="nHide==true" (click)="hide('n')">hide</button>
+        <p>Oni</p>
+        <button *ngIf="nHide==false" class="hide" (click)="hide('n')">hide</button>
+        <button *ngIf="nHide==true" class="hide" (click)="hide('n')">show</button>
       </div>
     </div>
   </div>

@@ -1,15 +1,10 @@
 import { Component } from '@angular/core';
-import { delay, interval, timer } from 'rxjs';
-import { defer, of, repeat } from 'rxjs';
-
 
 export interface CustomTimestamp<T> {
   time: number;
   position: T;
   label: string;
 }
-
-
 
 @Component({
   selector: 'app-identification-tools',
@@ -30,8 +25,6 @@ export class IdentificationToolsComponent {
     { time: 25, position: (25 / this.totalDurationHunt) * 100, label: 'Normal' }
   ];
 
-
-
   smudgeTimePassed: number = 0;
   huntTimePassed: number = 0;
   ngZone: any;
@@ -44,12 +37,19 @@ export class IdentificationToolsComponent {
     this.huntTimePassed = 0;
   }
 
-  volume: number = 50;
-  audio: HTMLAudioElement = new Audio();
+  private audio: HTMLAudioElement = new Audio("assets/sounds/footstep.wav");
+  speed: number = 1.7;
+  playing: boolean = false;
+  tempo = 115;
+  volume = 0.5;
+  running = false;
+  currentGhostInfo = 'Other';
 
   constructor() {
-    this.loadVolumeSetting();
+    this.audio.preload = 'auto';
+    this.audio.load();
     this.updateVolume();
+    this.loadVolumeSetting();
   }
 
   loadVolumeSetting() {
@@ -57,52 +57,52 @@ export class IdentificationToolsComponent {
     if (storedVolume !== null) {
       this.volume = parseFloat(storedVolume);
     } else {
-      this.volume = 50;
+      this.volume = 0.5;
     }
   }
+  updateSpeed(speed: number) {
+    this.speed = speed;
+
+
+
+  }
+
+  playSound(setTempo: number): void {
+    if (!this.playing) {
+      this.playing = true;
+      this.speed = setTempo;
+      this.step();
+    }
+    else if (this.playing) {
+      this.playing = false;
+    }
+  }
+
 
   updateVolume() {
     this.audio.volume = this.volume / 100;
     localStorage.setItem('volume', this.volume.toString());
   }
 
-  speed: number = 2;
-  playing: boolean = false;
-  playSound() {
+  private step(): void {
+    this.tempo = Math.ceil(((9.6 * Math.pow(this.speed, 2)) + (45.341 * this.speed) + 9.5862));
+    const interval = 1000 / (this.tempo / 60);
+    const footstep = this.audio.cloneNode() as HTMLAudioElement;
+    footstep.volume = this.volume;
     if (this.playing) {
-      this.playing = false;
-      this.audio.loop = false;
-    }
-    else {
-      this.playing = true;
-      this.audio.src = "assets/sounds/footstep.wav";
-      this.audio.load();
-      this.audio.loop = true;
-      this.audio.playbackRate = this.speed;
-      this.audio.play();
+      footstep.play();
+      setTimeout(this.step.bind(this), interval);
     }
   }
 
-
-  SpeedInMS: number = this.speed * 0.85;;
-  calculateSpeed(speed: number) {
-    this.SpeedInMS = Math.round(speed * 0.85 * 100) / 100;
-    this.audio.playbackRate = this.speed;
-  }
-
-  currentGhostInfo: string = "Other";
-  updateSpeed(speed: number, name: string) {
-    const speedHTML = Math.round(speed * 1.17647 * 100) / 100;
-    this.audio.playbackRate = speedHTML;
-    this.SpeedInMS = speed;
-    this.speed = speedHTML;
-    this.currentGhostInfo = name;
-
-    if (window.innerWidth < 1380)
+  autoscroll(){
+    if (window.innerWidth < 1380) {
       setTimeout(() => {
         window.scrollTo(99999, 99999)
       },
         10);
+    }
   }
 }
+
 
